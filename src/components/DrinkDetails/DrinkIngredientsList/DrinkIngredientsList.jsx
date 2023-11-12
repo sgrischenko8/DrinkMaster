@@ -25,6 +25,7 @@ const DrinkIngredientsList = ({ drinkDetails }) => {
               <ImageIngredient
                 src={ingredientThumb}
                 alt={title}
+                loading="lazy"
                 onError={(event) => {
                   event.currentTarget.src = drinkDummyImage;
                 }}

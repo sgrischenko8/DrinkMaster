@@ -33,7 +33,13 @@ const ErrorPage = () => {
               width="123"
               height="156"
             />
-            <img src={errorImgDesk} alt="error 404" width="123" height="156" />
+            <img
+              src={errorImgDesk}
+              alt="error 404"
+              loading="lazy"
+              width="123"
+              height="156"
+            />
           </picture>
           <StyledSecondSymbol>4</StyledSecondSymbol>
         </ErrorWrapper>

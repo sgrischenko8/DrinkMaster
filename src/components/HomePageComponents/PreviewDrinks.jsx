@@ -51,6 +51,7 @@ export const PreviewDrinks = () => {
                   <DrinkPhoto
                     src={drink.drinkThumb}
                     alt={`Photo of ${drink.drink}`}
+                    loading="lazy"
                     onError={(event) => {
                       event.currentTarget.src = DummyDrinkThumb;
                     }}

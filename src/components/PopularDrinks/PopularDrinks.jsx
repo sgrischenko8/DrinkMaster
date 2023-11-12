@@ -14,9 +14,7 @@ import { useEffect } from 'react';
 import { fetchPopularDrinks } from '../../redux/drinks/operations';
 import { selectPopularDrinks } from '../../redux/drinks/selectors';
 import DummyDrinkThumb from 'src/images/dummyDrinkThumb.png';
-import {
-  selectTheme
-} from '../../redux/theme/themeSlice';
+import { selectTheme } from '../../redux/theme/themeSlice';
 export const PopularDrinksComponent = () => {
   const theme = useSelector(selectTheme);
   const dispatch = useDispatch();
@@ -37,6 +35,7 @@ export const PopularDrinksComponent = () => {
                 <Photo
                   src={drink.drinkThumb}
                   alt={drink.drink}
+                  loading="lazy"
                   onError={(event) => {
                     event.currentTarget.src = DummyDrinkThumb;
                   }}

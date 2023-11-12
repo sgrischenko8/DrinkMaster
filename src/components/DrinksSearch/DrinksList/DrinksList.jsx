@@ -25,6 +25,7 @@ const DrinksList = () => {
           <StyledDrinkImage
             src={item.drinkThumb}
             alt={item.drink}
+            loading="lazy"
             onError={(event) => {
               event.currentTarget.src = drinkDummyImage;
             }}

@@ -1,12 +1,7 @@
-import {
-  UserInfoWrap,
-  UserLogoWrap,
-  UserSvg,
-  UserName,
-} from './UserLogo.styled';
+import { UserInfoWrap, UserLogoWrap, UserName } from './UserLogo.styled';
 import { useSelector } from 'react-redux';
-import { selectUser } from '../../redux/auth/selectors'
-import {selectTheme } from '../../redux/theme/themeSlice'
+import { selectUser } from '../../redux/auth/selectors';
+import { selectTheme } from '../../redux/theme/themeSlice';
 import userLogoImg from '../../images/user.jpg';
 const UserLogo = () => {
   const theme = useSelector(selectTheme);
@@ -17,12 +12,11 @@ const UserLogo = () => {
         <img
           width="44"
           height="44"
-
           src={user.avatar || userLogoImg}
           alt="User avatar"
+          loading="lazy"
           onError={(event) => {
             event.currentTarget.src = userLogoImg;
-
           }}
         />
       </UserLogoWrap>

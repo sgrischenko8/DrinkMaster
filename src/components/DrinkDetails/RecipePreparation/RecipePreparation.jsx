@@ -20,7 +20,7 @@ const RecipePreparation = ({ drinkDetails }) => {
           <Description theme={theme}>{description}</Description>
           <Description theme={theme}>{instructions}</Description>
         </div>
-        <AnyCocktail src={anyCocktail} alt="Any Cocktail" />
+        <AnyCocktail src={anyCocktail} alt="Any Cocktail" loading="lazy" />
       </Recipe>
     </>
   );

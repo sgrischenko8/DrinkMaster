@@ -18,7 +18,13 @@ const NotFound = ({ message }) => {
           width="198"
           height="247"
         />
-        <img src={notFoundDesk} alt="not found" width="198" height="247" />
+        <img
+          src={notFoundDesk}
+          alt="not found"
+          loading="lazy"
+          width="198"
+          height="247"
+        />
       </picture>
       <TextMessage>{message}</TextMessage>
     </NotFoundWrapper>

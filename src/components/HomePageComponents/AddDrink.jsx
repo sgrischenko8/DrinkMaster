@@ -52,6 +52,7 @@ export const AddDrink = () => {
           <img
             src={HomePageImageMobile}
             alt="Coctail image"
+            loading="lazy"
             width="252"
             height="313"
           />

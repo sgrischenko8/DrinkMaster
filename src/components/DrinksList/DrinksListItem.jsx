@@ -7,7 +7,7 @@ import {
   DrinkTitle,
   DrinkDesc,
   TitleWrapper,
-  DrinkAlc
+  DrinkAlc,
 } from './DrinksList.styled';
 import { useDispatch } from 'react-redux';
 import {
@@ -19,7 +19,7 @@ import sprite from './svg/sprite.svg';
 export const DrinksListItem = ({ drink }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
-  if (location.pathname === '/DrinkMaster/my') {
+    if (location.pathname === '/DrinkMaster/my') {
       dispatch(deleteOwnDrink(drink._id));
     } else if (location.pathname === '/DrinkMaster/favorites') {
       dispatch(deleteFavoriteDrink(drink._id));
@@ -27,10 +27,14 @@ export const DrinksListItem = ({ drink }) => {
   };
   return (
     <DrinksItem>
-      <DrinkPhoto src={drink.drinkThumb} alt={` Photo of cocktail ${drink.drink} `}
-      onError={(event) => {
-                      event.currentTarget.src = DummyDrinkThumb;
-                    }}/> 
+      <DrinkPhoto
+        src={drink.drinkThumb}
+        alt={` Photo of cocktail ${drink.drink} `}
+        loading="lazy"
+        onError={(event) => {
+          event.currentTarget.src = DummyDrinkThumb;
+        }}
+      />
       <TitleWrapper>
         <DrinkTitle>{drink.drink}</DrinkTitle>
         <DrinkAlc>{drink.alcoholic}</DrinkAlc>
