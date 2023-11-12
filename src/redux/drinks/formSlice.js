@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { initialValues } from 'src/utils/addDrinkFormInitials';
+// import { initialValues } from 'src/utils/addDrinkFormInitials';
 
 const persistConfig = {
   key: 'form',
@@ -10,7 +10,7 @@ const persistConfig = {
 
 const formSlice = createSlice({
   name: 'form',
-  initialState: initialValues,
+  initialState: {},
   reducers: {
     setForm(state, action) {
       state.form = action.payload;
