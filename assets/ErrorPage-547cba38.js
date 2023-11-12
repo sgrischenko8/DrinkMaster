@@ -1,4 +1,4 @@
-import{s as t,j as i}from"./index-e5bf46a2.js";import{H as d,F as p}from"./Header-06cb169f.js";import{e}from"./img-blue-iced-tea-desktop-08d93e29.js";import{e as n}from"./img-blue-iced-tea-desktop@2x-dc1c07d5.js";import"./index.esm-293956ae.js";const r=t.div`
+import{s as t,j as i}from"./index-9247e53d.js";import{H as d,F as p}from"./Header-a3106f5e.js";import{e}from"./img-blue-iced-tea-desktop-08d93e29.js";import{e as n}from"./img-blue-iced-tea-desktop@2x-dc1c07d5.js";import"./index.esm-7b9e9b6a.js";const r=t.div`
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -58,7 +58,7 @@ import{s as t,j as i}from"./index-e5bf46a2.js";import{H as d,F as p}from"./Heade
     font-size: 200px;
     line-height: 1;
   }
-`,s=t.span`
+`,a=t.span`
   position: absolute;
   color: rgba(243, 243, 243, 0.1);
   font-family: Manrope;
@@ -74,7 +74,7 @@ import{s as t,j as i}from"./index-e5bf46a2.js";import{H as d,F as p}from"./Heade
     font-size: 200px;
     line-height: 1;
   }
-`,a=t.div`
+`,s=t.div`
   position: absolute;
   background-color: rgba(64, 112, 205, 0.5);
   filter: blur(105px);
@@ -97,4 +97,4 @@ import{s as t,j as i}from"./index-e5bf46a2.js";import{H as d,F as p}from"./Heade
     top: -64px;
     right: 1346px;
   }
-`,w=()=>i.jsxs(i.Fragment,{children:[i.jsx(d,{}),i.jsxs(r,{children:[i.jsxs(o,{children:[i.jsx(x,{children:"4"}),i.jsxs("picture",{children:[i.jsx("source",{media:"(min-width: 768px)",srcSet:`${e} 1x, ${n} 2x`,width:"158",height:"201"}),i.jsx("source",{media:"(min-width: 375px)",srcSet:`${e} 1x, ${n} 2x`,width:"123",height:"156"}),i.jsx("img",{src:e,alt:"error 404",width:"123",height:"156"})]}),i.jsx(s,{children:"4"})]}),i.jsx(a,{})]}),i.jsx(p,{})]});export{w as default};
+`,w=()=>i.jsxs(i.Fragment,{children:[i.jsx(d,{}),i.jsxs(r,{children:[i.jsxs(o,{children:[i.jsx(x,{children:"4"}),i.jsxs("picture",{children:[i.jsx("source",{media:"(min-width: 768px)",srcSet:`${e} 1x, ${n} 2x`,width:"158",height:"201"}),i.jsx("source",{media:"(min-width: 375px)",srcSet:`${e} 1x, ${n} 2x`,width:"123",height:"156"}),i.jsx("img",{src:e,alt:"error 404",loading:"lazy",width:"123",height:"156"})]}),i.jsx(a,{children:"4"})]}),i.jsx(s,{})]}),i.jsx(p,{})]});export{w as default};
