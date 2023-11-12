@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-height: 100hv;
+  min-height: 100vh;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -34,19 +34,8 @@ export const Container = styled.div`
   }
 `;
 
-// export const StyledBGElement1 = styled.div`
-//   width: 387px;
-//   height: 381px;
-//   position: absolute;
-//   background-color: rgba(188, 230, 210, 0.3);
-//   filter: blur(105px);
-//   top: 343px;
-//   right: 193px;
-// `;
-
 export const StyledBGElement1 = styled.div`
   position: absolute;
-  /* background-color: rgba(64, 112, 205, 0.5); */
   background-color: ${({ theme }) =>
     theme === 'dark' ? 'rgba(64, 112, 205, 0.5)' : 'rgba(64, 112, 205, 0.10)'};
   filter: blur(105px);

@@ -11,21 +11,24 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/slice';
-import { ownDrinksReducer, favoriteDrinksReducer, popularDrinksReducer } from './drinks/drinksSlice';
-import { persistedFormReducer } from './drinks/formSlice';
-import { newDrinksReducer } from './homepage/newDrinkSlice';
-import { drinksReducer } from './drinks/drinksPage/drinksPageSlice';
 import {
+  ownDrinksReducer,
+  favoriteDrinksReducer,
+  popularDrinksReducer,
+  newDrinksReducer,
+  drinkByIdReducer,
   categoryReducer,
   glassReducer,
   ingredientReducer,
+  drinksReducer,
 } from './drinks/drinksSlice';
-import { drinkByIdReducer } from './drinks/drinkDetailsSlice';
-import {themeReducer} from './theme/themeSlice'
+import { persistedFormReducer } from './drinks/formSlice';
+
+import { themeReducer } from './theme/themeSlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['id','accessToken','refreshToken'],
+  whitelist: ['id', 'accessToken', 'refreshToken'],
 };
 
 export const store = configureStore({

@@ -5,13 +5,13 @@ import { useMediaQuery } from '@mui/material';
 import {
   selectCategories,
   selectIngredients,
-} from '../../redux/drinks/drinksPage/drinksPageSelectors';
+} from '../../redux/drinks/selectors';
 import {
   setCurrentPage,
   setQuery,
   setSelectedCategory,
   setSelectedIngredient,
-} from '../../redux/drinks/drinksPage/drinksPageSlice';
+} from '../../redux/drinks/drinksSlice';
 
 import {
   StyledInput,

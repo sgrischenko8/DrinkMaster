@@ -6,11 +6,17 @@ import {
   fetchFavoriteDrinks,
   addFavoriteDrink,
   deleteFavoriteDrink,
+  fetchNewDrinks,
+  fetchDrinkById,
   fetchCategories,
   fetchGlass,
   fetchIngredient,
   fetchPopularDrinks,
+  getDrinksCategoriesThunk,
+  getDrinksIngredientsThunk,
+  searchDrinksThunk,
 } from './operations';
+
 const handlePending = (state) => {
   state.isLoading = true;
 };
@@ -20,6 +26,15 @@ const handleRejected = (state, action) => {
 };
 const initialState = {
   items: [],
+  isLoading: false,
+  error: null,
+};
+const initialDrinksState = {
+  searchQuery: { keyword: '', category: '', ingredient: '' },
+  categories: [],
+  ingredients: [],
+  page: 1,
+  searchResults: [],
   isLoading: false,
   error: null,
 };
@@ -53,10 +68,9 @@ export const ownDrinksSlice = createSlice({
     },
     [fetchOwnDrinks.rejected]: handleRejected,
     [addOwnDrink.pending]: handlePending,
-    [addOwnDrink.fulfilled](state, action) {
+    [addOwnDrink.fulfilled](state) {
       state.isLoading = false;
       state.error = null;
-      // state.items.push(action.payload);
     },
     [addOwnDrink.rejected]: handleRejected,
     [deleteOwnDrink.pending]: handlePending,
@@ -99,6 +113,34 @@ export const favoriteDrinksSlice = createSlice({
   },
 });
 
+export const newDrinksSlice = createSlice({
+  name: 'newDrinks',
+  initialState,
+  extraReducers: {
+    [fetchNewDrinks.pending]: handlePending,
+    [fetchNewDrinks.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.items = action.payload;
+    },
+    [fetchNewDrinks.rejected]: handleRejected,
+  },
+});
+
+export const drinkByIdSlice = createSlice({
+  name: 'drinkDetails',
+  initialState,
+  extraReducers: {
+    [fetchDrinkById.pending]: handlePending,
+    [fetchDrinkById.fulfilled](state, { payload }) {
+      state.drinkById = payload;
+      state.isLoading = false;
+      state.error = null;
+    },
+    [fetchDrinkById.rejected]: handleRejected,
+  },
+});
+
 export const categorySlice = createSlice({
   name: 'category',
   initialState,
@@ -138,9 +180,58 @@ export const ingredientSlice = createSlice({
     [fetchIngredient.rejected]: handleRejected,
   },
 });
+
+const drinksSlice = createSlice({
+  name: 'drinks',
+  initialState: initialDrinksState,
+  reducers: {
+    setQuery: (state, { payload }) => {
+      state.searchQuery.keyword = payload;
+    },
+    setSelectedCategory: (state, { payload }) => {
+      state.searchQuery.category = payload;
+    },
+    setSelectedIngredient: (state, { payload }) => {
+      state.searchQuery.ingredient = payload;
+    },
+    setCurrentPage: (state, { payload }) => {
+      state.page = payload;
+    },
+  },
+  extraReducers: {
+    [getDrinksCategoriesThunk.pending]: handlePending,
+    [getDrinksCategoriesThunk.fulfilled](state, { payload }) {
+      state.categories = payload;
+      state.isLoading = false;
+    },
+    [getDrinksCategoriesThunk.rejected]: handleRejected,
+    [getDrinksIngredientsThunk.pending]: handlePending,
+    [getDrinksIngredientsThunk.fulfilled](state, { payload }) {
+      state.ingredients = payload;
+      state.isLoading = false;
+    },
+    [getDrinksIngredientsThunk.rejected]: handleRejected,
+    [searchDrinksThunk.pending]: handlePending,
+    [searchDrinksThunk.fulfilled](state, { payload }) {
+      state.searchResults = payload;
+      state.isLoading = false;
+    },
+    [searchDrinksThunk.rejected]: handleRejected,
+  },
+});
+
 export const favoriteDrinksReducer = favoriteDrinksSlice.reducer;
 export const ownDrinksReducer = ownDrinksSlice.reducer;
 export const popularDrinksReducer = popularDrinksSlice.reducer;
+export const newDrinksReducer = newDrinksSlice.reducer;
+export const drinkByIdReducer = drinkByIdSlice.reducer;
 export const categoryReducer = categorySlice.reducer;
 export const glassReducer = glassSlice.reducer;
 export const ingredientReducer = ingredientSlice.reducer;
+export const drinksReducer = drinksSlice.reducer;
+export const {
+  setQuery,
+  setSelectedCategory,
+  setSelectedIngredient,
+  setCurrentPage,
+} = drinksSlice.actions;

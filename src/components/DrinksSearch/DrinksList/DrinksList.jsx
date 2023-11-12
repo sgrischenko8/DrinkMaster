@@ -1,8 +1,7 @@
 import { useSelector } from 'react-redux';
 
-// import drinkImage from '../../../assets/images/emptyImage/drink-image.jpg';
-import drinkImage from '../../../assets/images/emptyImage/defolt-8.png';
-import { selectSearchResults } from '../../../redux/drinks/drinksPage/drinksPageSelectors';
+import drinkDummyImage from 'src/images/dummyDrinkThumb.png';
+import { selectSearchResults } from 'src/redux/drinks/selectors';
 
 import {
   DescriptionLink,
@@ -27,7 +26,7 @@ const DrinksList = () => {
             src={item.drinkThumb}
             alt={item.drink}
             onError={(event) => {
-              event.currentTarget.src = drinkImage;
+              event.currentTarget.src = drinkDummyImage;
             }}
           />
           <DescriptionWrapper>

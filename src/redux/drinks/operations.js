@@ -35,7 +35,6 @@ export const fetchPopularDrinks = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/drinks/popular');
-      console.log(response.data);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
@@ -52,9 +51,7 @@ export const addOwnDrinkImg = createAsyncThunk(
           'Content-Type': 'multipart/form-data',
         },
       });
-      return response.status === 201
-        ? response.data.avatarURL
-        : e.response.data;
+      return response.status.ok ? response.data.avatarURL : response.data;
     } catch (e) {
       if (!e.response) {
         throw e;
@@ -69,7 +66,7 @@ export const addOwnDrink = createAsyncThunk(
   async (drink, { rejectWithValue }) => {
     try {
       const response = await axios.post('/drinks/own/add', drink);
-      return response.status === 201 || response.status === 200 ? response.config.data : e.response.data;
+      return response.status.ok ? response.config.data : response.data;
     } catch (e) {
       if (!e.response) {
         throw e;
@@ -93,7 +90,7 @@ export const deleteOwnDrink = createAsyncThunk(
   'drinks/deleteOwnDrink',
   async (drinkId, thunkAPI) => {
     try {
-      const response = await axios.delete(`/drinks/own/remove/${drinkId}`);
+      await axios.delete(`/drinks/own/remove/${drinkId}`);
       return drinkId;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
@@ -104,8 +101,20 @@ export const deleteFavoriteDrink = createAsyncThunk(
   'drinks/deleteFavoriteDrink',
   async (drinkId, thunkAPI) => {
     try {
-      const response = await axios.delete(`/drinks/favorite/remove/${drinkId}`);
+      await axios.delete(`/drinks/favorite/remove/${drinkId}`);
       return drinkId;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  },
+);
+
+export const fetchNewDrinks = createAsyncThunk(
+  'drinks/fetchNew',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/drinks/mainpage');
+      return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
@@ -158,6 +167,61 @@ export const fetchDrinkById = createAsyncThunk(
       return data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
+    }
+  },
+);
+
+// --------------drinksPage operations-------
+
+// Запит на отримання категорій коктелів
+export const getDrinksCategoriesThunk = createAsyncThunk(
+  'filters/getDrinksCategories',
+  async (_, thunkAPI) => {
+    try {
+      // return await getDrinksCategories();
+      const { data } = await axios.get('filters/categories');
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  },
+);
+
+// Запит на отримання інградієнтів коктелів
+export const getDrinksIngredientsThunk = createAsyncThunk(
+  'filters/getDrinksIngredients',
+  async (_, thunkAPI) => {
+    try {
+      // return await getDrinksIngredients();
+      const { data } = await axios.get('filters/ingredients');
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  },
+);
+
+// Пошуковий запит за ключовим словом, вибраною категорією та інградієнтом
+export const searchDrinksThunk = createAsyncThunk(
+  'filters/searchDrinks',
+  async ({ searchQuery, page, limit }, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.accessToken;
+
+    if (persistedToken === null) {
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
+    try {
+      setToken(persistedToken);
+      // return await searchDrinks({ searchQuery }, page, limit);
+      const { keyword, category, ingredient } = searchQuery;
+
+      const { data } = await axios.get(
+        `drinks/search?page=${page}&limit=${limit}&keyword=${keyword}&category=${category}&ingredient=${ingredient}`,
+      );
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   },
 );

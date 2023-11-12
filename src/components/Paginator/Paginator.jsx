@@ -2,8 +2,8 @@ import { Pagination, Stack, useMediaQuery } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { colors } from '../../colors';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrentPage } from 'src/redux/drinks/drinksPage/drinksPageSlice';
-import { selectPage } from 'src/redux/drinks/drinksPage/drinksPageSelectors';
+import { setCurrentPage } from 'src/redux/drinks/drinksSlice';
+import { selectPage } from 'src/redux/drinks/selectors';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const Paginator = ({ limit, totalItems }) => {

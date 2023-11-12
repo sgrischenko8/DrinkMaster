@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from '@mui/material';
-import { selectNewDrinks } from '../../redux/homepage/selectors.js';
+import { selectNewDrinks } from '../../redux/drinks/selectors.js';
 import DummyDrinkThumb from 'src/images/dummyDrinkThumb.png';
 
 import {

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import welcomeCocktailDesk from '../../assets/images/welcomePage/cocktail-desk@1x.jpg';
-import welcomeCocktailDesk2 from '../../assets/images/welcomePage/cocktail-desk@2x.jpg';
-import welcomeCocktailTab from '../../assets/images/welcomePage/cocktail-tab@1x.jpg';
-import welcomeCocktailTab2 from '../../assets/images/welcomePage/cocktail-tab@2x.jpg';
-import welcomeCocktailMob from '../../assets/images/welcomePage/cocktail-mob@1x.jpg';
-import welcomeCocktailMob2 from '../../assets/images/welcomePage/cocktail-mob@2x.jpg';
+import welcomeCocktailDesk from 'src/images/cocktail-desk@1x.jpg';
+import welcomeCocktailDesk2 from 'src/images/cocktail-desk@2x.jpg';
+import welcomeCocktailTab from 'src/images/cocktail-tab@1x.jpg';
+import welcomeCocktailTab2 from 'src/images/cocktail-tab@2x.jpg';
+import welcomeCocktailMob from 'src/images/cocktail-mob@1x.jpg';
+import welcomeCocktailMob2 from 'src/images/cocktail-mob@2x.jpg';
 import { colors } from 'src/colors';
 
 export const WelcomeBox = styled.div`
@@ -111,7 +111,7 @@ export const WelcomeBox = styled.div`
 export const Title = styled.h1`
   display: flex;
   margin-bottom: 14px;
- gap: 2px;
+  gap: 2px;
   align-items: baseline;
   color: ${colors.light};
   font-family: Manrope;

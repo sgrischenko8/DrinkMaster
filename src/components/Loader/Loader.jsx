@@ -1,11 +1,11 @@
-import { LoaderWrap, StyledLoader } from './Loader.styled';
+import { LoaderWrap, CocktailIcon } from './Loader.styled';
 
 const Loader = () => {
   return (
     <LoaderWrap>
-      <StyledLoader />
+      <CocktailIcon />
     </LoaderWrap>
-  )
-}
+  );
+};
 
 export default Loader;

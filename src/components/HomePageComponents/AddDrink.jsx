@@ -7,8 +7,7 @@ import {
   DesktopTitle,
   PictureWrapper,
 } from './AddDrink.styled';
-import HomePageImageMobile from '../../assets/homepageimages/asr_blue_iced_tea_mobile.png';
-import HomePageImageTablet from '../../assets/homepageimages/asr_blue_iced_tea_tablet.png';
+import HomePageImageMobile from 'src/images/img-blue-iced-tea-desktop.png';
 
 import PageTitle from '../../components/PageTitle/PageTitle';
 import { selectTheme } from 'src/redux/theme/themeSlice';
@@ -31,14 +30,16 @@ export const AddDrink = () => {
             destination for exploring, crafting, and mastering the worlds finest
             beverages.
           </AppDescription>
-          <StyledLink to="/add" theme={theme}>Add drinks</StyledLink>
+          <StyledLink to="/add" theme={theme}>
+            Add drinks
+          </StyledLink>
         </AddDrinkWrapper>
       </DesktopTitle>
       <PictureWrapper>
         <picture>
           <source
             media="(min-width: 768px)"
-            srcSet={`${HomePageImageTablet}`}
+            srcSet={`${HomePageImageMobile}`}
             width="359"
             height="445"
           />

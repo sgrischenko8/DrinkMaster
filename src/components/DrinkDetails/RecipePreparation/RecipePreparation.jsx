@@ -5,7 +5,7 @@ import {
   Recipe,
   Title,
 } from './RecipePreparation.styled';
-import anyCocktail from '../../../assets/images/any-cocktail.jpg';
+import anyCocktail from 'src/images/any-cocktail.jpg';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const RecipePreparation = ({ drinkDetails }) => {

@@ -8,7 +8,7 @@ import {
   getDrinksCategoriesThunk,
   getDrinksIngredientsThunk,
   searchDrinksThunk,
-} from '../../redux/drinks/drinksPage/drinksPageOperations';
+} from 'src/redux/drinks/operations';
 import {
   selectCategories,
   selectIngredients,
@@ -16,7 +16,7 @@ import {
   selectPage,
   selectSearchQuery,
   selectSearchResults,
-} from '../../redux/drinks/drinksPage/drinksPageSelectors';
+} from '../../redux/drinks/selectors';
 import Paginator from 'src/components/Paginator/Paginator';
 import Footer from 'src/components/Footer/Footer';
 import Header from 'src/components/Header/Header';
@@ -26,7 +26,6 @@ import Loader from 'src/components/Loader/Loader';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
 import { selectTheme } from 'src/redux/theme/themeSlice';
-// import { Container, Title } from './DrinksPage.styled';
 
 const DrinksPage = () => {
   const categories = useSelector(selectCategories);

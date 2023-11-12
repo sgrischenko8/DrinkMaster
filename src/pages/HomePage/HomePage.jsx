@@ -9,9 +9,9 @@ import { useEffect } from 'react';
 import {
   selectErrorNew,
   selectIsLoadingNew,
-} from '../../redux/homepage/selectors.js';
+} from 'src/redux/drinks/selectors.js';
 
-import { fetchNewDrinks } from '../../redux/homepage/operations.js';
+import { fetchNewDrinks } from 'src/redux/drinks/operations.js';
 import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
 import Loader from 'src/components/Loader/Loader';
 import { selectTheme } from 'src/redux/theme/themeSlice';

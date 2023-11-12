@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { keyframes } from 'styled-components';
-import { ReactComponent as Cocktail } from '../../assets/images/welcomePage/cocktail.svg';
+import { ReactComponent as Cocktail } from 'src/images/cocktail.svg';
 import { colors } from 'src/colors';
 
 const rotate = keyframes`

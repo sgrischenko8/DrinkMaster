@@ -8,7 +8,7 @@ import {
   TitleIngredient,
   MeasureIngredien,
 } from './DrinkIngredientsList.styled';
-import defaultImage from '../../../assets/images/emptyImage/defolt-8.png';
+import drinkDummyImage from 'src/images/dummyDrinkThumb.png';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const DrinkIngredientsList = ({ drinkDetails }) => {
@@ -26,7 +26,7 @@ const DrinkIngredientsList = ({ drinkDetails }) => {
                 src={ingredientThumb}
                 alt={title}
                 onError={(event) => {
-                  event.currentTarget.src = defaultImage;
+                  event.currentTarget.src = drinkDummyImage;
                 }}
               />
               <DescriptionIngredient>

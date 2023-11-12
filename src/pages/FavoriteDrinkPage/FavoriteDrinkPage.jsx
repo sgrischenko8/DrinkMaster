@@ -1,4 +1,4 @@
-import { Container, Title } from './FavoriteDrinkPage.styled';
+import { Container } from './FavoriteDrinkPage.styled';
 import { DrinksList } from '../../components/DrinksList/DrinksList';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -7,17 +7,15 @@ import {
   selectErrorFavorite,
   selectIsLoadingFavorite,
   selectFavoriteDrinksLimit,
-  selectFavoriteDrinksMax
+  selectFavoriteDrinksMax,
+  selectPage,
 } from '../../redux/drinks/selectors';
-import { selectPage } from 'src/redux/drinks/drinksPage/drinksPageSelectors';
 import Header from 'src/components/Header/Header';
 import Footer from 'src/components/Footer/Footer';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import Loader from 'src/components/Loader/Loader';
 import NotFound from '../../components/NotFound/NotFound';
-import {
-  selectTheme
-} from '../../redux/theme/themeSlice';
+import { selectTheme } from '../../redux/theme/themeSlice';
 import Paginator from 'src/components/Paginator/Paginator';
 const FavoriteDrinkPage = () => {
   const dispatch = useDispatch();
@@ -34,7 +32,7 @@ const FavoriteDrinkPage = () => {
     <>
       <Header></Header>
       <Container>
-        <PageTitle title='Favorites' theme={theme} />
+        <PageTitle title="Favorites" theme={theme} />
         {isLoading && !error && <Loader />}
         {error && <NotFound message={'Something went wrong'} />}
         <DrinksList />

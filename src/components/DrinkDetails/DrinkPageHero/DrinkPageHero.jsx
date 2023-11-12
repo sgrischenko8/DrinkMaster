@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Glass, Description, StyledImage, Hero } from './DrinkPageHero.styled';
-import defaultImage from '../../../assets/images/emptyImage/defolt-8.png';
+import drinkDummyImage from 'src/images/dummyDrinkThumb.png';
 import Button from '../Button/Button';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import { selectTheme } from 'src/redux/theme/themeSlice';
@@ -24,7 +24,7 @@ const DrinkPageHero = ({ drinkDetails }) => {
         src={drinkThumb}
         alt="picture Cocktail"
         onError={(event) => {
-          event.currentTarget.src = defaultImage;
+          event.currentTarget.src = drinkDummyImage;
         }}
       />
     </Hero>

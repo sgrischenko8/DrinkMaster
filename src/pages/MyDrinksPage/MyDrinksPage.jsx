@@ -1,4 +1,4 @@
-import { Container, Title } from './MyDrinksPage.styled';
+import { Container } from './MyDrinksPage.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchOwnDrinks } from '../../redux/drinks/operations';
@@ -7,18 +7,15 @@ import {
   selectErrorOwn,
   selectIsLoadingOwn,
   selectOwnDrinksLimit,
-  selectOwnDrinksMax
-} from '../../redux/drinks/selectors';
-import { selectPage } from 'src/redux/drinks/drinksPage/drinksPageSelectors';
+  selectOwnDrinksMax,
+  selectPage,
+} from 'src/redux/drinks/selectors';
 import Header from 'src/components/Header/Header';
 import Footer from 'src/components/Footer/Footer';
-import { PopularDrinksComponent } from 'src/components/PopularDrinks/PopularDrinks';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import Loader from 'src/components/Loader/Loader';
 import NotFound from '../../components/NotFound/NotFound';
-import {
-  selectTheme
-} from '../../redux/theme/themeSlice';
+import { selectTheme } from '../../redux/theme/themeSlice';
 import Paginator from 'src/components/Paginator/Paginator';
 const MyDrinksPage = () => {
   const dispatch = useDispatch();
@@ -35,11 +32,11 @@ const MyDrinksPage = () => {
     <>
       <Header></Header>
       <Container>
-        <PageTitle  title='My drinks' theme={theme}/>
+        <PageTitle title="My drinks" theme={theme} />
         {isLoading && !error && <Loader />}
-        {error && <NotFound message={'Something went wrong'}/>}
+        {error && <NotFound message={'Something went wrong'} />}
         <DrinksList />
-         <Paginator limit={limit} totalItems={max} />
+        <Paginator limit={limit} totalItems={max} />
       </Container>
       <Footer></Footer>
     </>

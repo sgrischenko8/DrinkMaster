@@ -1,6 +1,6 @@
 import Select from 'react-select';
 import styled from 'styled-components';
-import { ReactComponent as SearchIcon } from '../../assets/images/searchIcon.svg';
+import { ReactComponent as SearchIcon } from 'src/images/searchIcon.svg';
 import { colors } from '../../colors';
 
 export const StyledSearchWrapper = styled.div`

@@ -1,10 +1,8 @@
 import Footer from 'src/components/Footer/Footer';
 import Header from 'src/components/Header/Header';
 
-import errorImgDesk from '../../assets/images/errorPage/img-blue-iced-tea-error-desktop.png';
-import errorImgDesk2 from '../../assets/images/errorPage/img-blue-iced-tea-error-desktop@2x.png';
-import errorImgMobile from '../../assets/images/errorPage/img-blue-iced-tea-error-mobile.png';
-import errorImgMobile2 from '../../assets/images/errorPage/img-blue-iced-tea-error-mobile@2x.png';
+import errorImgDesk from 'src/images/img-blue-iced-tea-desktop.png';
+import errorImgDesk2 from 'src/images/img-blue-iced-tea-desktop@2x.png';
 import {
   ErrorContainer,
   ErrorWrapper,
@@ -31,7 +29,7 @@ const ErrorPage = () => {
             />
             <source
               media="(min-width: 375px)"
-              srcSet={`${errorImgMobile} 1x, ${errorImgMobile2} 2x`}
+              srcSet={`${errorImgDesk} 1x, ${errorImgDesk2} 2x`}
               width="123"
               height="156"
             />
