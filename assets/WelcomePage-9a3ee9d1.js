@@ -1,4 +1,4 @@
-import{s as o,c as e,L as i,j as t,r as a,a as s}from"./index-f736c5d8.js";import{W as c,T as l,a as d,S as h,b as m,c as p}from"./WelcomePage.styled-b977056d.js";const x=o.div`
+import{s as o,c as e,L as i,j as t,r as a,a as s}from"./index-6586d40f.js";import{W as c,T as l,a as d,S as h,b as m,c as p}from"./WelcomePage.styled-7238f3c6.js";const x=o.div`
   display: flex;
   z-index: 2;
 `,r=o(i)`

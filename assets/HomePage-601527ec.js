@@ -1,4 +1,4 @@
-import{n as f,a as k,s as t,c as n,L as m,k as a,m as h,j as i,r as x,u as b,o as $,p as j}from"./index-f736c5d8.js";import{H as D,F as v}from"./Header-efdd332e.js";import{e as p}from"./img-blue-iced-tea-desktop-08d93e29.js";import{P as z,s as L,d as S,a as T,b as P}from"./dummyDrinkThumb-1df3e1b3.js";import{u as g}from"./useMediaQuery-21981841.js";import{M as E}from"./MainAppContainer-f3acb088.js";import"./index.esm-44a89781.js";import"./getThemeProps-4b394d36.js";const C=f.div`
+import{n as f,a as k,s as t,c as n,L as m,k as a,m as h,j as i,r as x,u as b,o as $,p as j}from"./index-6586d40f.js";import{H as D,F as v}from"./Header-b8d97d9d.js";import{e as p}from"./img-blue-iced-tea-desktop-08d93e29.js";import{P as z,s as L,d as S,a as T,b as P}from"./dummyDrinkThumb-8c23b3c2.js";import{u as g}from"./useMediaQuery-f77d7d37.js";import{M as E}from"./MainAppContainer-ec1b0da1.js";import"./index.esm-18c56132.js";import"./getThemeProps-334c37ee.js";const C=f.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,8 +175,7 @@ margin-bottom: 40px;
       180deg,
       rgba(10, 10, 17, 0.02) 51.18%,
       rgba(10, 10, 17, 0.77) 97.66%
-    ),
-    url(<path-to-image>),
+    ),    
     lightgray 50% / cover no-repeat;
   transition: transform 0.3s ease;
   &:hover {
