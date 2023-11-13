@@ -65,8 +65,7 @@ export const DrinkPhoto = styled.img`
       180deg,
       rgba(10, 10, 17, 0.02) 51.18%,
       rgba(10, 10, 17, 0.77) 97.66%
-    ),
-    url(<path-to-image>),
+    ),    
     lightgray 50% / cover no-repeat;
   transition: transform 0.3s ease;
   &:hover {
