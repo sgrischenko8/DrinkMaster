@@ -9,8 +9,7 @@ body {
   background-color: #0a0a11;
   box-sizing: border-box;
   background-size: auto 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center center;  
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -36,18 +35,7 @@ body {
     670px 670px,
     670px 670px;
 
-  @media screen and (min-width: 768px) {
-    background-image: radial-gradient(
-        circle,
-        rgba(64, 112, 205, 0.5) 0%,
-        rgba(255, 255, 255, 0) 65%
-      ),
-      radial-gradient(
-        circle,
-        rgba(64, 112, 205, 0.5) 0%,
-        rgba(255, 255, 255, 0) 65%
-      );
-
+  @media screen and (min-width: 768px) { 
     background-position-x: -430px, calc(100vw - 200px);
     background-position-y: 50px, 480px;
     background-size:
@@ -56,17 +44,6 @@ body {
   }
 
   @media screen and (min-width: 1440px) {
-    background-image: radial-gradient(
-        circle,
-        rgba(64, 112, 205, 0.5) 0%,
-        rgba(255, 255, 255, 0) 65%
-      ),
-      radial-gradient(
-        circle,
-        rgba(64, 112, 205, 0.5) 0%,
-        rgba(255, 255, 255, 0) 65%
-      );
-
     background-position-x: -580px, calc(100vw - 300px);
     background-position-y: 0px, 350px;
     background-size:
