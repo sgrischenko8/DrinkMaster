@@ -19,9 +19,9 @@ import sprite from './svg/sprite.svg';
 export const DrinksListItem = ({ drink }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
-    if (location.pathname === '/DrinkMaster/my') {
+    if (location.pathname === '/drinkMaster/my') {
       dispatch(deleteOwnDrink(drink._id));
-    } else if (location.pathname === '/DrinkMaster/favorites') {
+    } else if (location.pathname === '/drinkMaster/favorites') {
       dispatch(deleteFavoriteDrink(drink._id));
     }
   };
