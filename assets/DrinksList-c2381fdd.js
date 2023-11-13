@@ -1,4 +1,4 @@
-import{s as t,c as n,N as l,u as p,j as i,U as d,V as c,k as o,m as x}from"./index-c5d6f8a1.js";import{d as h,x as m,y as g}from"./dummyDrinkThumb-a7501969.js";import{N as f}from"./Paginator-38fd61e7.js";const u=t.ul`
+import{s as t,c as n,N as d,u as l,j as i,U as p,V as c,k as o,m as x}from"./index-f19493ea.js";import{d as h,x as m,y as g}from"./dummyDrinkThumb-c831cb81.js";import{N as f}from"./Paginator-11d67ffa.js";const u=t.ul`
 display: flex;
 flex-wrap: wrap; 
 justify-content:center;
@@ -71,11 +71,11 @@ background: #161F37;
 width: 56px;
 height:56px;
 }
-`,z=t(l)`
+`,z=t(d)`
 color: ${n.light};
 padding: 18px 44px;
 border-radius: 42px;
 background: ${n.secondaryDark};
 font-weight: 600;
 border:none;
-`,F="/drinkMaster/assets/sprite-6b675af9.svg",M=({drink:e})=>{const s=p(),r=()=>{location.pathname==="/DrinkMaster/my"?s(d(e._id)):location.pathname==="/DrinkMaster/favorites"&&s(c(e._id))};return i.jsxs(k,{children:[i.jsx(y,{src:e.drinkThumb,alt:` Photo of cocktail ${e.drink} `,loading:"lazy",onError:a=>{a.currentTarget.src=h}}),i.jsxs(b,{children:[i.jsx(w,{children:e.drink}),i.jsx(j,{children:e.alcoholic})]}),i.jsx(D,{children:e.description}),i.jsxs(v,{children:[i.jsx(z,{to:`/drink/${e._id}`,children:"See more"}),i.jsx($,{type:"button",onClick:r,children:i.jsx("svg",{width:"24px",height:"24px",stroke:"#F3F3F3",children:i.jsx("use",{href:`${F}#icon-trash`})})})]})]})},_=()=>{let e;location.pathname==="/drinkMaster/my"?e=o(m):location.pathname==="/drinkMaster/favorites"&&(e=o(g));const s=o(x);return e.length>0?i.jsx(u,{theme:s,children:e.map(r=>i.jsx(M,{drink:r},r._id))}):i.jsx(f,{message:"Your drinks list is empty"})};export{_ as D};
+`,F="/drinkMaster/assets/sprite-6b675af9.svg",M=({drink:e})=>{const s=l(),r=()=>{location.pathname==="/drinkMaster/my"?s(p(e._id)):location.pathname==="/drinkMaster/favorites"&&s(c(e._id))};return i.jsxs(k,{children:[i.jsx(y,{src:e.drinkThumb,alt:` Photo of cocktail ${e.drink} `,loading:"lazy",onError:a=>{a.currentTarget.src=h}}),i.jsxs(b,{children:[i.jsx(w,{children:e.drink}),i.jsx(j,{children:e.alcoholic})]}),i.jsx(D,{children:e.description}),i.jsxs(v,{children:[i.jsx(z,{to:`/drink/${e._id}`,children:"See more"}),i.jsx($,{type:"button",onClick:r,children:i.jsx("svg",{width:"24px",height:"24px",stroke:"#F3F3F3",children:i.jsx("use",{href:`${F}#icon-trash`})})})]})]})},_=()=>{let e;location.pathname==="/drinkMaster/my"?e=o(m):location.pathname==="/drinkMaster/favorites"&&(e=o(g));const s=o(x);return e.length>0?i.jsx(u,{theme:s,children:e.map(r=>i.jsx(M,{drink:r},r._id))}):i.jsx(f,{message:"Your drinks list is empty"})};export{_ as D};
