@@ -1,4 +1,4 @@
-import{s as r,j as a}from"./index-f19493ea.js";const o=r.h1`
+import{s as r,j as a}from"./index-82cb553d.js";const o=r.h1`
   max-width: 335px;
   margin-right: auto;
   margin-bottom: ${({$marginM:s})=>s};

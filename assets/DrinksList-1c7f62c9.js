@@ -1,4 +1,4 @@
-import{s as t,c as n,N as d,u as l,j as i,U as p,V as c,k as o,m as x}from"./index-f19493ea.js";import{d as h,x as m,y as g}from"./dummyDrinkThumb-c831cb81.js";import{N as f}from"./Paginator-11d67ffa.js";const u=t.ul`
+import{s as t,c as n,N as d,u as l,j as i,U as p,V as c,k as o,m as x}from"./index-82cb553d.js";import{d as h,x as m,y as g}from"./dummyDrinkThumb-e28ccdff.js";import{N as f}from"./Paginator-6ecc4141.js";const u=t.ul`
 display: flex;
 flex-wrap: wrap; 
 justify-content:center;
@@ -28,7 +28,7 @@ width: 400px;
 width: 100%;
 height: auto;
 border-radius: 8px;
-background: linear-gradient(180deg, rgba(10, 10, 17, 0.02) 51.18%, rgba(10, 10, 17, 0.77) 97.66%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+background: linear-gradient(180deg, rgba(10, 10, 17, 0.02) 51.18%, rgba(10, 10, 17, 0.77) 97.66%), lightgray 50% / cover no-repeat;
 `,w=t.h2`
 font-size: 18px;
 font-weight: 500;
