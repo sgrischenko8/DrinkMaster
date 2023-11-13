@@ -12,9 +12,9 @@ import {
 import NotFound from '../NotFound/NotFound'
 export const DrinksList = () => {
   let listOfDrinks;
-  if (location.pathname === '/DrinkMaster/my') {
+  if (location.pathname === '/drinkMaster/my') {
     listOfDrinks = useSelector(selectOwnDrinks);
-  } else if (location.pathname === '/DrinkMaster/favorites') {
+  } else if (location.pathname === '/drinkMaster/favorites') {
     listOfDrinks = useSelector(selectFavoriteDrinks);
   }
   const theme = useSelector(selectTheme);
