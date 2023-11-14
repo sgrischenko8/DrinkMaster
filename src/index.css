@@ -8,8 +8,6 @@ body {
   overflow-x: hidden;
   background-color: #0a0a11;
   box-sizing: border-box;
-  background-size: auto 100%;
-  background-position: center center;  
   font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -34,23 +32,8 @@ body {
   background-size:
     670px 670px,
     670px 670px;
-
-  @media screen and (min-width: 768px) { 
-    background-position-x: -430px, calc(100vw - 200px);
-    background-position-y: 50px, 480px;
-    background-size:
-      670px 670px,
-      570px 570px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    background-position-x: -580px, calc(100vw - 300px);
-    background-position-y: 0px, 350px;
-    background-size:
-      870px 870px,
-      670px 670px;
-  }
 }
+
 h1,
 h2,
 h3,

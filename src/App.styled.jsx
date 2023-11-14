@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { colors } from './colors';
+
 export const AppWrapper = styled.div`
   width: 100%;
   ${({ theme }) => theme === 'light' && ` background: ${colors.light};`}

@@ -16,12 +16,13 @@ import {
 } from '../../redux/drinks/operations';
 import DummyDrinkThumb from 'src/images/dummyDrinkThumb.png';
 import sprite from './svg/sprite.svg';
+
 export const DrinksListItem = ({ drink }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
-    if (location.pathname === '/drinkMaster/my') {
+    if (location.pathname.includes('/my')) {
       dispatch(deleteOwnDrink(drink._id));
-    } else if (location.pathname === '/drinkMaster/favorites') {
+    } else if (location.pathname.includes('/favorites')) {
       dispatch(deleteFavoriteDrink(drink._id));
     }
   };

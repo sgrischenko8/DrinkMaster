@@ -10,7 +10,7 @@ import {
   StyledFirstSymbol,
   StyledSecondSymbol,
 } from './ErrorPage.styled';
-import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
+// import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
 
 const ErrorPage = () => {
   return (

@@ -43,13 +43,17 @@ export const Description = styled.p`
   }
 `;
 
-export const AnyCocktail = styled.img`
-  width: 335px;
-  height: 430px;
-  border-radius: 8px;
-  object-fit: none;
+export const Thumb = styled.div`
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 
+  padding-top: 40px;
+  border-radius: 8px;
+
+  background-color: black;
   @media (min-width: 768px) {
+    padding: 0;
     width: 704px;
     height: 430px;
     margin-top: 20px;
@@ -61,7 +65,24 @@ export const AnyCocktail = styled.img`
   }
 `;
 
+export const AnyCocktail = styled.img`
+  width: 524px;
+  object-fit: fill;
+
+  @media (min-width: 768px) {
+    width: 704px;
+    height: 430px;
+  }
+  @media (min-width: 1440px) {
+    width: 631px;
+    height: 480px;
+  }
+`;
+
 export const Recipe = styled.div`
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   @media (min-width: 1440px) {
     display: flex;
     gap: 60px;
