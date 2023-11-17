@@ -1,4 +1,4 @@
-import{s as o,c as e,L as i,j as t,r as a,a as s}from"./index-3309c2b2.js";import{W as c,T as l,a as d,S as h,b as m,c as p}from"./WelcomePage.styled-e552737d.js";const x=o.div`
+import{s as o,c as e,L as i,j as t,r as a,a as s}from"./index-cc3dcb5c.js";import{W as c,T as l,a as d,S as h,b as m,c as p}from"./WelcomePage.styled-6d709035.js";const x=o.div`
   display: flex;
   z-index: 2;
 `,r=o(i)`
@@ -67,4 +67,4 @@ import{s as o,c as e,L as i,j as t,r as a,a as s}from"./index-3309c2b2.js";impor
     width: 45px;
     height: 45px;
   }
-`,y=()=>t.jsx("span",{children:t.jsx(b,{})});function w(){return t.jsxs(c,{children:[t.jsxs(l,{children:["Welcome to the app! ",t.jsx(y,{})]}),t.jsx(d,{children:"This app offers more than just a collection of recipes - it is designed to be your very own digital cookbook. You can easily save and retrieve your own recipes at any time."}),t.jsx(h,{}),t.jsx(m,{}),t.jsx(p,{}),t.jsx(f,{})]})}export{w as default};
+`,y=()=>t.jsx("span",{children:t.jsx(b,{})});function w(){return t.jsxs(c,{children:[t.jsxs(l,{children:["Welcome to the app!! ",t.jsx(y,{})]}),t.jsx(d,{children:"This app offers more than just a collection of recipes - it is designed to be your very own digital cookbook. You can easily save and retrieve your own recipes at any time."}),t.jsx(h,{}),t.jsx(m,{}),t.jsx(p,{}),t.jsx(f,{})]})}export{w as default};
