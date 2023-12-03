@@ -8,6 +8,7 @@ import {
   PictureWrapper,
 } from './AddDrink.styled';
 import HomePageImageMobile from 'src/images/img-blue-iced-tea-desktop.png';
+import HomePageImageMobile2 from 'src/images/img-blue-iced-tea-desktop@2x".png';
 
 import PageTitle from '../../components/PageTitle/PageTitle';
 import { selectTheme } from 'src/redux/theme/themeSlice';
@@ -39,13 +40,13 @@ export const AddDrink = () => {
         <picture>
           <source
             media="(min-width: 768px)"
-            srcSet={`${HomePageImageMobile}`}
+            srcSet={`${HomePageImageMobile} 1x, ${HomePageImageMobile2} 2x`}
             width="359"
             height="445"
           />
           <source
             media="(min-width: 375px)"
-            srcSet={`${HomePageImageMobile}`}
+            srcSet={`${HomePageImageMobile} 1x, ${HomePageImageMobile2} 2x`}
             width="252"
             height="313"
           />

@@ -1,6 +1,4 @@
-import Footer from 'src/components/Footer/Footer';
-import Header from 'src/components/Header/Header';
-import { HomeContainer, StyledBGElement5 } from './HomePage.styled';
+import { StyledBGElement5 } from './HomePage.styled';
 import { AddDrink } from '../../components/HomePageComponents/AddDrink';
 import { PreviewDrinks } from '../../components/HomePageComponents/PreviewDrinks';
 
@@ -12,7 +10,6 @@ import {
 } from 'src/redux/drinks/selectors.js';
 
 import { fetchNewDrinks } from 'src/redux/drinks/operations.js';
-import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
 import Loader from 'src/components/Loader/Loader';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
@@ -35,15 +32,9 @@ const HomePage = () => {
   }
   return (
     <>
-      <Header />
-      <MainAppContainer>
-        <HomeContainer theme={theme}>
-          <AddDrink />
-          <PreviewDrinks />
-        </HomeContainer>
-        <StyledBGElement5 theme={theme} />
-      </MainAppContainer>
-      <Footer />
+      <AddDrink />
+      <PreviewDrinks />
+      <StyledBGElement5 theme={theme} />
     </>
   );
 };

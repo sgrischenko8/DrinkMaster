@@ -6,6 +6,7 @@ import { PublicRoute } from './components/PublicRoute/PublicRoute';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { refreshUser } from './redux/auth/operations';
+
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage'));
 const SingupPage = lazy(() => import('./pages/SingupPage/SingupPage'));
 const SinginPage = lazy(() => import('./pages/SinginPage/SinginPage'));
@@ -17,18 +18,11 @@ const FavoriteDrinkPage = lazy(() =>
   import('./pages/FavoriteDrinkPage/FavoriteDrinkPage'),
 );
 const DrinkDetailsPage = lazy(() => import('./pages/DrinkPage/DrinkPage'));
-
-const PrivacyPage = lazy(() => import('./pages/PrivacyPage/PrivacyPage'));
-const TermsOfServicePage = lazy(() =>
-  import('./pages/TermsOfServicePage/TermsOfServicePage'),
-);
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 
 import { AppWrapper } from './App.styled';
 import { selectTheme } from './redux/theme/themeSlice';
 import LoadingPage from './pages/LoadingPage/LoadingPage';
-
-// const test = import.meta.env.VITE_API_TEST;
 
 function App() {
   const dispatch = useDispatch();
@@ -37,7 +31,7 @@ function App() {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-  
+
   return isRefreshing ? (
     <SharedLayout />
   ) : (
@@ -105,15 +99,6 @@ function App() {
             element={
               <PrivateRoute component={<DrinkDetailsPage />}></PrivateRoute>
             }
-          />
-
-          <Route
-            path="privacy"
-            element={<PrivateRoute component={<PrivacyPage />} />}
-          />
-          <Route
-            path="service"
-            element={<PrivateRoute component={<TermsOfServicePage />} />}
           />
 
           <Route path="*" element={<ErrorPage />} />

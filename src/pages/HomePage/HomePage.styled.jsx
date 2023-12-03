@@ -1,23 +1,6 @@
 import styled from '@emotion/styled';
 // import { colors } from '../../../src/colors';
 
-export const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  @media only screen and (min-width: 768px) {
-    padding-top: 120px;
-    padding-bottom: 140px;
-  }
-  @media only screen and (min-width: 1440px) {
-    padding-top: 0px;
-  }
-`;
-
 export const StyledBGElement5 = styled.div`
   @media screen and (min-width: 1440px) {
     position: absolute;

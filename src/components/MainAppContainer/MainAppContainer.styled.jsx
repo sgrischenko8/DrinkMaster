@@ -3,33 +3,23 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-height: 100vh;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 80px 20px;
   position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
-  /* min-width: 375px; */
-
-  /* @media screen and (max-width: 375px) {
-    width: 375px;
-  } */
 
   @media screen and (max-width: 767px) {
     width: 375px;
   }
 
   @media screen and (min-width: 768px) {
-    /* max-width: 768px; */
     width: 768px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 140px 32px;
   }
 
   @media screen and (min-width: 1440px) {
-    /* max-width: 1440px; */
     width: 1440px;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding: 160px 100px 140px;
     overflow: visible;
   }
 `;

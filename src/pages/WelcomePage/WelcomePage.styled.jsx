@@ -108,16 +108,18 @@ export const WelcomeBox = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  display: flex;
+export const FlexContainer = styled.div`
   margin-bottom: 14px;
+  display: flex;
   gap: 2px;
   align-items: baseline;
+`;
+
+export const Title = styled.h1`
   color: ${colors.light};
-  font-family: Manrope;
   font-size: 28px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: calc(32 / 28);
   letter-spacing: -0.56px;
 
   z-index: 5;
@@ -130,8 +132,8 @@ export const Title = styled.h1`
 `;
 
 export const WelcomeText = styled.p`
+  margin-top: 14px;
   margin-bottom: 40px;
-
   font-size: 14px;
   line-height: calc(18 / 14);
 

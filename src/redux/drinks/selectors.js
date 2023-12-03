@@ -34,9 +34,9 @@ export const selectCategory = (state) => state.category.items;
 export const selectGlass = (state) => state.glass.items;
 export const selectIngredient = (state) => state.ingredient.items;
 
-export const selectDrinkById = (state) => state.drinkDetails.items;
+export const selectDrinkById = (state) => state.drinkDetails.drinkById;
 export const selectDrinkDetailsIsLoading = (state) =>
-  state.drinkDetails.IsLoading;
+  state.drinkDetails.isLoading;
 export const selectDrinkDetailsError = (state) => state.drinkDetails.error;
 
 export const selectSearchQuery = (state) => state.drinks.searchQuery;

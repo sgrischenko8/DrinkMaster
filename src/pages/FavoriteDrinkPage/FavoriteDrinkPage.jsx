@@ -1,4 +1,3 @@
-import { Container } from './FavoriteDrinkPage.styled';
 import { DrinksList } from '../../components/DrinksList/DrinksList';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -10,8 +9,6 @@ import {
   selectFavoriteDrinksMax,
   selectPage,
 } from '../../redux/drinks/selectors';
-import Header from 'src/components/Header/Header';
-import Footer from 'src/components/Footer/Footer';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import Loader from 'src/components/Loader/Loader';
 import NotFound from '../../components/NotFound/NotFound';
@@ -30,15 +27,11 @@ const FavoriteDrinkPage = () => {
   }, [page]);
   return (
     <>
-      <Header></Header>
-      <Container>
-        <PageTitle title="Favorites" theme={theme} />
-        {isLoading && !error && <Loader />}
-        {error && <NotFound message={'Something went wrong'} />}
-        <DrinksList />
-        <Paginator limit={limit} totalItems={max} />
-      </Container>
-      <Footer></Footer>
+      <PageTitle title="Favorites" theme={theme} />
+      {isLoading && !error && <Loader />}
+      {error && <NotFound message={'Something went wrong'} />}
+      <DrinksList />
+      <Paginator limit={limit} totalItems={max} />
     </>
   );
 };

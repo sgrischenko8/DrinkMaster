@@ -80,9 +80,6 @@ export const AnyCocktail = styled.img`
 `;
 
 export const Recipe = styled.div`
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
   @media (min-width: 1440px) {
     display: flex;
     gap: 60px;

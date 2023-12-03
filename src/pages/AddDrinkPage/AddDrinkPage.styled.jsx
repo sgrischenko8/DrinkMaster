@@ -1,17 +1,6 @@
 import styled from '@emotion/styled';
 import { colors } from 'src/colors';
 
-export const SubContainer = styled.div`
-  width: 100%;
-  padding: 80px 0;
-  @media only screen and (min-width: 768px) {
-    padding: 140px 0;
-    @media only screen and (min-width: 1440px) {
-      padding: 160px 0;
-    }
-  }
-`;
-
 export const FlexBox = styled.div`
   display: flex;
   flex-direction: column;

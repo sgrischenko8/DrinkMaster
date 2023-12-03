@@ -55,7 +55,6 @@ export const DesktopTitle = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (min-width: 1440px) {
-    margin-top: 185px;
   }
   animation: ${slideDown} 1s forwards;
 `;
@@ -131,6 +130,6 @@ export const PictureWrapper = styled.div`
   flex-shrink: 0;
   animation: ${slideLeft} 1s forwards;
   @media only screen and (min-width: 1440px) {
-    margin-top: 128px;
+    margin-top: -57px;
   }
 `;

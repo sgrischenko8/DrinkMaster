@@ -1,4 +1,3 @@
-import { Container } from './MyDrinksPage.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchOwnDrinks } from '../../redux/drinks/operations';
@@ -10,8 +9,7 @@ import {
   selectOwnDrinksMax,
   selectPage,
 } from 'src/redux/drinks/selectors';
-import Header from 'src/components/Header/Header';
-import Footer from 'src/components/Footer/Footer';
+
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import Loader from 'src/components/Loader/Loader';
 import NotFound from '../../components/NotFound/NotFound';
@@ -28,17 +26,14 @@ const MyDrinksPage = () => {
   useEffect(() => {
     dispatch(fetchOwnDrinks(page));
   }, [page]);
+
   return (
     <>
-      <Header></Header>
-      <Container>
-        <PageTitle title="My drinks" theme={theme} />
-        {isLoading && !error && <Loader />}
-        {error && <NotFound message={'Something went wrong'} />}
-        <DrinksList />
-        <Paginator limit={limit} totalItems={max} />
-      </Container>
-      <Footer></Footer>
+      <PageTitle title="My drinks" theme={theme} />
+      {isLoading && !error && <Loader />}
+      {error && <NotFound message={'Something went wrong'} />}
+      <DrinksList />
+      <Paginator limit={limit} totalItems={max} />
     </>
   );
 };

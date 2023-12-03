@@ -18,13 +18,9 @@ import {
   selectSearchResults,
 } from '../../redux/drinks/selectors';
 import Paginator from 'src/components/Paginator/Paginator';
-import Footer from 'src/components/Footer/Footer';
-import Header from 'src/components/Header/Header';
 
-import { DrinksContainer } from './DrinksPage.styled';
 import Loader from 'src/components/Loader/Loader';
 import PageTitle from 'src/components/PageTitle/PageTitle';
-import MainAppContainer from 'src/components/MainAppContainer/MainAppContainer';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const DrinksPage = () => {
@@ -57,22 +53,16 @@ const DrinksPage = () => {
 
   return (
     <>
-      <Header />
-      <MainAppContainer>
-        <DrinksContainer>
-          <PageTitle title="Drinks" theme={theme} />
-          <DrinksSearch />
-          {isLoading ? (
-            <Loader />
-          ) : (
-            <>
-              <DrinksList />
-              <Paginator totalItems={searchResults.max_page} limit={limit} />
-            </>
-          )}
-        </DrinksContainer>
-      </MainAppContainer>
-      <Footer />
+      <PageTitle title="Drinks" theme={theme} />
+      <DrinksSearch />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <DrinksList />
+          <Paginator totalItems={searchResults.max_page} limit={limit} />
+        </>
+      )}
     </>
   );
 };

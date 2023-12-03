@@ -7,6 +7,7 @@ import {
   Thumb,
 } from './RecipePreparation.styled';
 import anyCocktail from 'src/images/any-cocktail.jpg';
+import anyCocktail2 from 'src/images/any-cocktail@2x.jpg';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const RecipePreparation = ({ drinkDetails }) => {
@@ -23,7 +24,7 @@ const RecipePreparation = ({ drinkDetails }) => {
         </div>
         <Thumb>
           <AnyCocktail
-            src={anyCocktail}
+            srcSet={`${anyCocktail} 1x, ${anyCocktail2} 2x`}
             alt="Any Cocktail"
             loading="lazy"
             width={335}

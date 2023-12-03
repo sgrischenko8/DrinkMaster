@@ -59,7 +59,7 @@ export const SingupForm = () => {
   });
 
   return (
-    <div>
+    <div style={{ marginTop: '28px' }}>
       <Form onSubmit={formik.handleSubmit}>
         <ThemeProvider theme={theme}>
           <FormControl sx={{ width: '100%' }}>
@@ -226,14 +226,18 @@ export const SingupForm = () => {
             )}
           </FormControl>
           <Button
-            sx={{zIndex: 5, ...buttonStyled }}
+            sx={{ zIndex: 5, ...buttonStyled }}
             variant="contained"
             fullWidth
             type="submit"
           >
             Sign Up
           </Button>
-          <Link sx={{zIndex: 5, ...linkStyled }} component={NavLink} to="/signin">
+          <Link
+            sx={{ zIndex: 5, ...linkStyled }}
+            component={NavLink}
+            to="/signin"
+          >
             Sign In
           </Link>
         </ThemeProvider>

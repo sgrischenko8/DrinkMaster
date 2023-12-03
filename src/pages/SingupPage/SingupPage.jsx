@@ -1,5 +1,5 @@
 import { SingupForm } from '../../components/SingupForm/SingupForm';
-import { Title } from './SingupPage.styled';
+import { Title } from '../WelcomePage/WelcomePage.styled';
 import {
   WelcomeBox,
   StyledBGElement6,

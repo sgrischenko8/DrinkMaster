@@ -2,8 +2,7 @@ import Logo from '../Logo/Logo';
 import FooterNav from '../FooterNav/FooterNav';
 import FollowUs from '../FollowUs/FollowUs';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
-import FooterRightsAndPolicy from '../FooterRightsAndPolicy/FooterRightsAndPolicy';
-import MainAppContainer from '../MainAppContainer/MainAppContainer';
+import { FooterRightsAndPolicy } from '../FooterRightsAndPolicy/FooterRightsAndPolicy';
 
 import {
   FooterContainer,
@@ -18,13 +17,12 @@ import {
 const Footer = () => {
   return (
     <FooterContainer>
-      {/* <MainAppContainer> */}
       <Container>
         <MainWrap>
           <LogoFollowNavWrap>
             <LogoFollowWrap>
-              <Logo theme='dark'/>
-              <FollowUs theme='dark' />
+              <Logo theme="dark" />
+              <FollowUs theme="dark" />
             </LogoFollowWrap>
             <FooterNav />
           </LogoFollowNavWrap>
@@ -33,7 +31,6 @@ const Footer = () => {
         <FooterRightsAndPolicy />
         <StyledBGElement3 />
         <StyledBGElement4 />
-        {/* </MainAppContainer> */}
       </Container>
     </FooterContainer>
   );

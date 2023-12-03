@@ -1,15 +1,41 @@
-import { RightsAndPolicyWrap, AllRightsText, PolicyLinksWrap, Link } from './FooterRightsAndPolicy.styled';
+import {
+  RightsAndPolicyWrap,
+  AllRightsText,
+  PolicyLinksWrap,
+  Button,
+} from './FooterRightsAndPolicy.styled';
+import { useState } from 'react';
+import { Modal } from 'src/components/Modal/Modal';
+import { Privacy } from 'src/components/Privacy/Privacy';
+import { TermsOfService } from 'src/components/TermsOfService/TermsOfService';
 
-const FooterRightsAndPolicy = () => {
+export const FooterRightsAndPolicy = () => {
+  const [whatModalIsOpen, setWhatModalIsOpen] = useState(null);
+
   return (
     <RightsAndPolicyWrap>
-      <AllRightsText>&copy;2023 Drink Master. All rights reserved.</AllRightsText>
+      <AllRightsText>
+        &copy;2023 Drink Master. All rights reserved.
+      </AllRightsText>
       <PolicyLinksWrap>
-        <Link to={'/privacy'}>Privacy Policy</Link>
-        <Link to={'/service'}>Terms of Service</Link>
+        <Button height={40} onClick={() => setWhatModalIsOpen('Privacy')}>
+          Privacy Policy
+        </Button>
+        <Button
+          height={40}
+          onClick={() => setWhatModalIsOpen('TermsOfService')}
+        >
+          Terms of Service
+        </Button>
+        {whatModalIsOpen && (
+          <Modal
+            onClose={setWhatModalIsOpen}
+            content={
+              whatModalIsOpen === 'Privacy' ? <Privacy /> : <TermsOfService />
+            }
+          ></Modal>
+        )}
       </PolicyLinksWrap>
     </RightsAndPolicyWrap>
   );
 };
-
-export default FooterRightsAndPolicy;
