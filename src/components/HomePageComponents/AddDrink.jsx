@@ -8,7 +8,7 @@ import {
   PictureWrapper,
 } from './AddDrink.styled';
 import HomePageImageMobile from 'src/images/img-blue-iced-tea-desktop.png';
-import HomePageImageMobile2 from 'src/images/img-blue-iced-tea-desktop@2x".png';
+import HomePageImageMobile2 from 'src/images/img-blue-iced-tea-desktop@2x.png';
 
 import PageTitle from '../../components/PageTitle/PageTitle';
 import { selectTheme } from 'src/redux/theme/themeSlice';
