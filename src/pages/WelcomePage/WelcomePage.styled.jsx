@@ -1,114 +1,59 @@
-import styled from 'styled-components';
-import welcomeCocktailDesk from 'src/images/cocktail-desk@1x.jpg';
-import welcomeCocktailDesk2 from 'src/images/cocktail-desk@2x.jpg';
-import welcomeCocktailTab from 'src/images/cocktail-tab@1x.jpg';
-import welcomeCocktailTab2 from 'src/images/cocktail-tab@2x.jpg';
-import welcomeCocktailMob from 'src/images/cocktail-mob@1x.jpg';
-import welcomeCocktailMob2 from 'src/images/cocktail-mob@2x.jpg';
+import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
+import { ReactComponent as CocktailIcon } from 'src/images/cocktail.svg';
 import { colors } from 'src/colors';
+import hero from 'src/images/hero.jpg';
+import hero2 from 'src/images/hero@2x.jpg';
 
-export const WelcomeBox = styled.div`
-  height: 100vh;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 20px;
-  padding-left: 20px;
+export const HeroImg = styled.div`
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index:1;
+  box-sizing:border-box;
 
-  background-repeat: no-repeat;
-  background-position: right top;
-
-  background-size: 300px 812px;
-  background-image: linear-gradient(
-      0deg,
-      rgba(10, 10, 17, 0.2) 0%,
-      rgba(10, 10, 17, 0.2) 100%
-    ),
-    linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-    linear-gradient(0deg, #0a0a11 11.92%, rgba(10, 10, 17, 0) 91.07%),
-    url(${welcomeCocktailMob});
+  background: linear-gradient(0deg, #0a0a1120 0%, #0a0a1120 100%),
+    linear-gradient(1deg, #0a0a11 0%, rgba(10, 10, 17, 0) 25%),
+    linear-gradient(82deg, #0a0a11 0%, rgba(10, 10, 17, 0) 100%), url(${hero});
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        0deg,
-        rgba(10, 10, 17, 0.2) 0%,
-        rgba(10, 10, 17, 0.2) 100%
-      ),
-      linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-      linear-gradient(0deg, #060609 5.92%, rgba(10, 10, 17, 0) 91.07%),
-      url(${welcomeCocktailMob2});
+    background: linear-gradient(0deg, #0a0a1120 0%, #0a0a1120 100%),
+      linear-gradient(1deg, #0a0a11 0%, rgba(10, 10, 17, 0) 100%),
+      linear-gradient(82deg, #0a0a11 0%, rgba(10, 10, 17, 0) 100%),
+      url(${hero2});
   }
 
-  @media screen and (max-width: 767px) {
-    align-items: center;
-  }
+  background-position: left 20% center;
+  background-repeat: no-repeat;
 
-  @media screen and (min-width: 768px) and (max-width: 1439px) {
-    padding-right: 64px;
-    padding-left: 64px;
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(0deg, rgba(10, 10, 17, 0) 0%, #0a0a1120 100%),
+    linear-gradient(1deg, #0a0a11 0%, rgba(10, 10, 17, 0) 25%),
+    linear-gradient(82deg, #0a0a11 15%, rgba(10, 10, 17, 0) 30%), url(${hero});
 
-    background-size: 466px 1024px;
-    background-image: linear-gradient(
-        0deg,
-        rgba(10, 10, 17, 0.2) 0%,
-        rgba(10, 10, 17, 0.2) 100%
-      ),
-      linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-      linear-gradient(85deg, #060609 5.92%, rgba(10, 10, 17, 0) 91.07%),
-      url(${welcomeCocktailTab});
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          0deg,
-          rgba(10, 10, 17, 0.2) 0%,
-          rgba(10, 10, 17, 0.2) 100%
-        ),
-        linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-        linear-gradient(85deg, #060609 5.92%, rgba(10, 10, 17, 0) 91.07%),
-        url(${welcomeCocktailTab2});
+   left: 302px;
+    background-position: left center;
+    background-size:cover; 
+    }
+    @media screen and (min-width: 1440px) {
+       background: linear-gradient(0deg, rgba(10, 10, 17, 0) 0%, #0a0a1120 100%),
+    linear-gradient(1deg, #0a0a11 0%, rgba(10, 10, 17, 0) 25%),
+    linear-gradient(82deg, #0a0a11 8%, rgba(10, 10, 17, 0) 30%), url(${hero});
+      left: 737px;
+      background-position: left;
+      background-size:60%; 
+      }
     }
   }
 
-  @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-    max-height: 770px;
-    padding-right: 100px;
-    padding-left: 100px;
-
-    background-size: 703px 770px;
-    background-image: linear-gradient(
-        0deg,
-        rgba(10, 10, 17, 0.2) 0%,
-        rgba(10, 10, 17, 0.2) 100%
-      ),
-      linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-      linear-gradient(85deg, #060609 5.92%, rgba(10, 10, 17, 0) 91.07%),
-      url(${welcomeCocktailDesk});
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          0deg,
-          rgba(10, 10, 17, 0.2) 0%,
-          rgba(10, 10, 17, 0.2) 100%
-        ),
-        linear-gradient(91deg, #0a0a11 -0.56%, rgba(10, 10, 17, 0) 51.93%),
-        linear-gradient(85deg, #060609 5.92%, rgba(10, 10, 17, 0) 91.07%),
-        url(${welcomeCocktailDesk2});
-    }
-  }
 `;
 
 export const FlexContainer = styled.div`
+  position: relative;
   margin-bottom: 14px;
   display: flex;
   gap: 2px;
@@ -128,6 +73,46 @@ export const Title = styled.h1`
     font-size: 40px;
     line-height: calc(44 / 40);
     letter-spacing: -0.8px;
+  }
+`;
+
+const rotate = keyframes`
+ 0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+    25% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 0;
+  }
+`;
+
+export const StyledCocktailIcon = styled(CocktailIcon)`
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 100%;
+  display: block;
+  fill: ${colors.disabled};
+  stroke: ${colors.light};
+
+  animation: ${rotate} 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
+  @media screen and (min-width: 768px) {
+    width: 45px;
+    height: 45px;
   }
 `;
 
@@ -151,81 +136,43 @@ export const WelcomeText = styled.p`
   }
 `;
 
-export const StyledBGElement6 = styled.div`
-  position: absolute;
-  border-radius: 387px;
-  background-color: rgba(188, 230, 210, 0.4);
-  filter: blur(105px);
+export const ButtonBox = styled.div`
+  display: flex;
+  gap: 14px;
   z-index: 2;
-  width: 257px;
-  height: 247px;
-  top: 52px;
-  left: 54px;
-
-  @media screen and (min-width: 768px) {
-    width: 387px;
-    height: 373px;
-    top: 46px;
-    left: 0px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 387px;
-    height: 251px;
-    top: 0;
-    left: 101px;
-  }
 `;
-export const StyledBGElement7 = styled.div`
-  position: absolute;
-  border-radius: 550px;
-  background-color: rgba(64, 112, 205, 0.5);
-  filter: blur(105px);
-  z-index: 1;
-  width: 120px;
-  height: 526px;
-  top: 20px;
-  left: -50px;
 
-  @media screen and (min-width: 768px) {
-    width: 150px;
-    height: 650px;
-    top: 0;
-    right: 649px;
+export const AuthLink = styled(Link)`
+  padding: 14px 40px;
 
-    border-radius: 830px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+
+  color: ${colors.secondaryDark};
+  border-radius: 42px;
+  background: ${colors.light};
+
+  &:hover {
+    color: ${colors.light};
+    background: ${colors.secondaryDark};
   }
 
-  @media screen and (min-width: 1440px) {
-    width: 304px;
-    height: 600px;
-    top: 0;
-    right: 650px;
+  @media screen and (min-width: 768px) {
+    padding: 18px 44px;
+    color: #161f37;
+    font-size: 16px;
+    line-height: calc(18 / 16);
   }
 `;
 
-export const StyledBGElement8 = styled.div`
-  position: absolute;
-  border-radius: 549px;
-  background-color: rgba(64, 112, 205, 0.5);
-  filter: blur(105px);
-  z-index: 1;
-  width: 150px;
-  height: 250px;
-  bottom: 0;
-  right: 0;
+export const Signin = styled(AuthLink)`
+  color: ${colors.light};
+  border: 1px solid rgba(243, 243, 243, 0.2);
+  background: transparent;
 
-  @media screen and (min-width: 768px) {
-    width: 620px;
-    height: 350px;
-    bottom: 20px;
-    right: -399px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 520px;
-    height: 550px;
-    bottom: 20px;
-    right: -399px;
+  &:hover {
+    color: ${colors.secondaryDark};
+    background: ${colors.light};
   }
 `;

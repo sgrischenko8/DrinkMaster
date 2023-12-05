@@ -10,8 +10,6 @@ import {
   LogoFollowWrap,
   LogoFollowNavWrap,
   Container,
-  StyledBGElement3,
-  StyledBGElement4,
 } from './Footer.styled';
 
 const Footer = () => {
@@ -29,8 +27,6 @@ const Footer = () => {
           <SubscribeForm />
         </MainWrap>
         <FooterRightsAndPolicy />
-        <StyledBGElement3 />
-        <StyledBGElement4 />
       </Container>
     </FooterContainer>
   );

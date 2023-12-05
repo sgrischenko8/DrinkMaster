@@ -1,5 +1,4 @@
 import { ErrorWrapper, GiantNumber, Picture } from './ErrorPage.styled';
-import { StyledBGElement2 } from 'src/components/MainAppContainer/MainAppContainer.styled';
 import errorImgDesk from 'src/images/img-blue-iced-tea-desktop.png';
 import errorImgDesk2 from 'src/images/img-blue-iced-tea-desktop@2x.png';
 
@@ -23,7 +22,6 @@ const ErrorPage = () => {
         />
         <img src={errorImgDesk} alt="error 404" width="123" height="156" />
       </Picture>
-      <StyledBGElement2 />
     </ErrorWrapper>
   );
 };

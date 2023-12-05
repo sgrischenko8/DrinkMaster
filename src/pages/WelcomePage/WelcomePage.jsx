@@ -1,21 +1,22 @@
-import { AuthNav } from '../../components/AuthNav/AuthNav';
 import {
-  WelcomeBox,
+  HeroImg,
   FlexContainer,
   Title,
+  StyledCocktailIcon,
   WelcomeText,
-  StyledBGElement6,
-  StyledBGElement7,
-  StyledBGElement8,
+  ButtonBox,
+  AuthLink,
+  Signin,
 } from './WelcomePage.styled';
-import { CocktailIcon } from 'src/components/CocktailIcon/CocktailIcon';
+import { WelcomeBox } from 'src/components/WelcomeBox/WelcomeBox';
 
 export default function WelcomePage() {
   return (
     <WelcomeBox>
+      <HeroImg />
       <FlexContainer>
         <Title>Welcome to the app!!</Title>
-        <CocktailIcon />
+        <StyledCocktailIcon />
       </FlexContainer>
 
       <WelcomeText>
@@ -23,10 +24,11 @@ export default function WelcomePage() {
         to be your very own digital cookbook. You can easily save and retrieve
         your own recipes at any time.
       </WelcomeText>
-      <StyledBGElement6 />
-      <StyledBGElement7 />
-      <StyledBGElement8 />
-      <AuthNav />
+
+      <ButtonBox>
+        <AuthLink to="/signup">Sign Up</AuthLink>
+        <Signin to="/signin">Sign In</Signin>
+      </ButtonBox>
     </WelcomeBox>
   );
 }

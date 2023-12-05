@@ -1,74 +1,99 @@
 import styled from 'styled-components';
+import { colors } from 'src/colors';
 
 export const Container = styled.div`
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 80px 20px;
   position: relative;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  width: 100%;
+  // margin: 0 auto;
+  padding: 0 20px;
 
-  @media screen and (max-width: 767px) {
-    width: 375px;
-  }
+  box-sizing: border-box;
+  overflow-y: hidden;
+  ${({ theme }) => theme === 'light' && ` background: ${colors.light};`}
 
   @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 140px 32px;
+    padding: 0 32px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 1440px;
-    padding: 160px 100px 140px;
-    overflow: visible;
+    padding: 0 100px;
   }
 `;
 
-export const StyledBGElement1 = styled.div`
+export const Bubble1 = styled.div`
   position: absolute;
-  background-color: ${({ theme }) =>
-    theme === 'dark' ? 'rgba(64, 112, 205, 0.5)' : 'rgba(64, 112, 205, 0.10)'};
-  filter: blur(105px);
-  z-index: -10;
+  border-radius: 50%;
+  // border: 10px solid red;
+  background-color: #4070cd50;
+  filter: blur(209.71px);
+  z-index: 1;
+
+  bottom: -749px;
+  left: 180px;
+  width: 784px;
+  height: 849px;
 
   @media screen and (min-width: 768px) {
+    bottom: -789px;
+    left: 95px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    left: 435px;
+  }
+`;
+
+export const Bubble2 = styled(Bubble1)`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
     width: 549px;
     height: 543px;
-    top: 414px;
+    top: 498px;
     left: 651px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 549px;
-    height: 543px;
-    top: 374px;
+    top: 458px;
     left: 1181px;
   }
 `;
-
-export const StyledBGElement2 = styled.div`
-  position: absolute;
-  /* background-color: rgba(64, 112, 205, 0.5); */
-  background-color: ${({ theme }) =>
-    theme === 'dark' ? 'rgba(64, 112, 205, 0.5)' : 'rgba(64, 112, 205, 0.10)'};
-  filter: blur(105px);
-  z-index: -10;
+export const Bubble3 = styled(Bubble1)`
   width: 520px;
   height: 550px;
-  top: -52px;
-  right: 254px;
+  left: -399px;
+  top: 20px;
+
+  background-color: ${({ theme }) =>
+    theme === 'dark' ? '#4070CD50' : '#4070CD10'};
 
   @media screen and (min-width: 768px) {
+    top: 20px;
+    left: -623px;
     width: 784px;
     height: 830px;
-    top: -65px;
-    right: 607px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 784px;
     height: 849px;
-    top: -64px;
-    right: 1346px;
+    left: -690px;
+  }
+`;
+export const Bubble4 = styled(Bubble1)`
+  background-color: #bce6d240;
+  bottom: -662px;
+  left: -372px;
+  width: 774px;
+  height: 762px;
+
+  @media screen and (min-width: 768px) {
+    bottom: -637px;
+    left: -63px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    left: 193px;
   }
 `;

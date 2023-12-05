@@ -1,4 +1,3 @@
-import { StyledBGElement5 } from './HomePage.styled';
 import { AddDrink } from '../../components/HomePageComponents/AddDrink';
 import { PreviewDrinks } from '../../components/HomePageComponents/PreviewDrinks';
 
@@ -11,13 +10,11 @@ import {
 
 import { fetchNewDrinks } from 'src/redux/drinks/operations.js';
 import Loader from 'src/components/Loader/Loader';
-import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const HomePage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoadingNew);
   const error = useSelector(selectErrorNew);
-  const theme = useSelector(selectTheme);
 
   useEffect(() => {
     dispatch(fetchNewDrinks());
@@ -34,7 +31,6 @@ const HomePage = () => {
     <>
       <AddDrink />
       <PreviewDrinks />
-      <StyledBGElement5 theme={theme} />
     </>
   );
 };

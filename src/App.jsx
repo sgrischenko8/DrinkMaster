@@ -1,11 +1,12 @@
-import { lazy, useEffect } from 'react';
+import { lazy, useEffect, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout/SharedLayout';
 import { PublicRoute } from './components/PublicRoute/PublicRoute';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { refreshUser } from './redux/auth/operations';
+import Loader from 'src/components/Loader/Loader';
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage'));
 const SingupPage = lazy(() => import('./pages/SingupPage/SingupPage'));
@@ -20,46 +21,50 @@ const FavoriteDrinkPage = lazy(() =>
 const DrinkDetailsPage = lazy(() => import('./pages/DrinkPage/DrinkPage'));
 const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 
-import { AppWrapper } from './App.styled';
-import { selectTheme } from './redux/theme/themeSlice';
 import LoadingPage from './pages/LoadingPage/LoadingPage';
 
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const theme = useSelector(selectTheme);
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <SharedLayout />
+    <Loader />
   ) : (
-    <AppWrapper theme={theme}>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<WelcomePage />} />
-          <Route
-            path="/"
-            element={
-              <PublicRoute redirectTo="/welcome" component={<WelcomePage />} />
-            }
-          />
-          <Route path="/welcome" element={<WelcomePage />} />
-          <Route path="/auth/google-redirect" element={<LoadingPage />} />
-          <Route path="/auth/google" element={<LoadingPage />} />
-          <Route
-            path="/signup"
-            element={
-              <PublicRoute redirectTo="/home" component={<SingupPage />} />
-            }
-          />
-          <Route
-            path="/signin"
-            element={
-              <PublicRoute redirectTo="/home" component={<SinginPage />} />
-            }
-          />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
+        }
+      >
+        <Route
+          index
+          element={
+            <PublicRoute redirectTo="/home" component={<WelcomePage />} />
+          }
+        />
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/auth/google-redirect" element={<LoadingPage />} />
+        <Route path="/auth/google" element={<LoadingPage />} />
+        <Route
+          path="/signup"
+          element={
+            <PublicRoute redirectTo="/home" component={<SingupPage />} />
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <PublicRoute redirectTo="/home" component={<SinginPage />} />
+          }
+        />
+        <Route element={<SharedLayout />}>
           <Route
             path="/home"
             element={
@@ -100,11 +105,11 @@ function App() {
               <PrivateRoute component={<DrinkDetailsPage />}></PrivateRoute>
             }
           />
-
-          <Route path="*" element={<ErrorPage />} />
         </Route>
-      </Routes>
-    </AppWrapper>
+
+        <Route path="*" element={<ErrorPage />} />
+      </Route>
+    </Routes>
   );
 }
 export default App;

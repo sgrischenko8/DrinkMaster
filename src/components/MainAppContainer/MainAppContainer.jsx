@@ -1,18 +1,23 @@
 import { useSelector } from 'react-redux';
 import {
   Container,
-  StyledBGElement1,
-  StyledBGElement2,
+  Bubble1,
+  Bubble2,
+  Bubble3,
+  Bubble4,
 } from './MainAppContainer.styled';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const MainAppContainer = ({ children }) => {
   const theme = useSelector(selectTheme);
+
   return (
-    <Container>
+    <Container theme={theme}>
       {children}
-      <StyledBGElement1 theme={theme} />
-      <StyledBGElement2 theme={theme} />
+      <Bubble1 />
+      <Bubble2 />
+      <Bubble3 theme={theme} />
+      <Bubble4 />
     </Container>
   );
 };
