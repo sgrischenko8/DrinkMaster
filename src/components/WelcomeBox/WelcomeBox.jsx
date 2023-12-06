@@ -1,5 +1,6 @@
 import {
   WelcomeWrapper,
+  HeroImg,
   BubbleWelcome1,
   BubbleWelcome2,
   BubbleWelcome3,
@@ -9,6 +10,7 @@ export const WelcomeBox = ({ children }) => {
   return (
     <WelcomeWrapper>
       {children}
+      <HeroImg />
       <BubbleWelcome1 />
       <BubbleWelcome2 />
       <BubbleWelcome3 />

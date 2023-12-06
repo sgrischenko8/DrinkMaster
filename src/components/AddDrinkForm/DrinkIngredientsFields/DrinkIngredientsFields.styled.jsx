@@ -24,7 +24,6 @@ export const Title = styled.h2`
 `;
 
 export const DivIncrement = styled.div`
-  box-sizing: border-box;
   padding: 0px 12px;
   width: 104px;
   height: 38px;
@@ -43,11 +42,8 @@ export const DivIncrement = styled.div`
 `;
 
 export const Button = styled.button`
+  padding: 0;
   letter-spacing: -0.05em;
-  line-height: calc(18 / 14);
-  border: none;
-  background-color: inherit;
-  color: #f3f3f330;
   color: ${({ theme }) => (theme === 'dark' ? '#f3f3f330' : '#0A0A1130')};
   :hover {
     color: ${({ theme }) =>
@@ -56,11 +52,9 @@ export const Button = styled.button`
   }
 `;
 export const ButtonIncr = styled.button`
+  padding: 0;
   font-size: 20px;
   letter-spacing: -0.05em;
-  line-height: calc(18 / 14);
-  border: none;
-  background-color: inherit;
   color: ${({ theme }) =>
     theme === 'dark' ? `${colors.light}` : `${colors.primaryDark}`};
   :hover {

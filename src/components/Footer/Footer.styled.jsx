@@ -6,7 +6,6 @@ export const Container = styled.div`
   padding-left: 20px;
   padding-top: 40px;
   padding-bottom: 18px;
-  box-sizing: border-box;
   overflow: hidden;
 
   @media screen and (max-width: 767px) {

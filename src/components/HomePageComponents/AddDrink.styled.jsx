@@ -82,12 +82,8 @@ margin-bottom: 40px;
 export const StyledLink = styled(Link)`
   display: flex;
   width: 151px;
-  height: 46px;
   justify-content: center;
   align-items: center;
-  border-radius: 42px;
-  font-size: 14px;
-  font-weight: 600;
   transition: 250ms ease;
   ${({ theme }) =>
     theme === 'dark'
@@ -100,8 +96,6 @@ export const StyledLink = styled(Link)`
 
   @media only screen and (min-width: 768px) {
     width: 169px;
-    height: 54px;
-    font-size: 16px;
   }
 
   @media only screen and (min-width: 1440px) {

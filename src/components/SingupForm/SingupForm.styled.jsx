@@ -6,10 +6,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   font-family: inherit;
-  z-index: 5;
-
   @media screen and (min-width: 768px) {
     width: 400px;
   }

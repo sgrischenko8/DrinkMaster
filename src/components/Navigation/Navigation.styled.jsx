@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { colors } from '../../colors';
 
 export const NavigationWrap = styled.nav`
-display: inline-flex;
-flex-direction: column;
-align-items: center;
-gap: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
   @media screen and (min-width: 1440px) {
     flex-direction: row;
@@ -16,14 +16,13 @@ gap: 16px;
 `;
 
 export const StyledNavigationLink = styled(NavLink)`
-${({ theme }) =>
-    theme === 'dark' ?
-    ` color: ${colors.light}; background: ${colors.primaryDark}; border: 1px solid rgba(243, 243, 243, 0.20);` : `color: ${colors. primaryDark}; background: ${colors.light}; border: 1px solid rgba(22, 31, 55, 0.20);`}
-  font-size: 14px;
+  ${({ theme }) =>
+    theme === 'dark'
+      ? ` color: ${colors.light}; background: ${colors.primaryDark}; border: 1px solid rgba(243, 243, 243, 0.20);`
+      : `color: ${colors.primaryDark}; background: ${colors.light}; border: 1px solid rgba(22, 31, 55, 0.20);`}
   font-weight: 500;
-  line-height: 20px; 
+  line-height: calc(20 / 14);
   padding: 8px 16px;
-  border-radius: 40px;
   transition: background 0.2s;
   overflow: hidden;
 
@@ -34,6 +33,6 @@ ${({ theme }) =>
   }
 
   @media screen and (min-width: 768px) {
-    line-height: 22.4px; 
+    line-height: 22.4px;
   }
 `;

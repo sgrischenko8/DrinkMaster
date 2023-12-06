@@ -32,13 +32,11 @@ export const StyledLabel = styled.label`
 `;
 
 export const StyledInput = styled.input`
-  box-sizing: border-box;
   width: 335px;
   height: 54px;
   padding: 18px 24px 18px 24px;
   background-color: transparent;
   border-radius: 200px;
-  /* border: 1px solid rgba(243, 243, 243, 0.2); */
   border: ${({ theme }) =>
     theme === 'dark'
       ? '1px solid rgba(243, 243, 243, 0.2)'
@@ -85,13 +83,9 @@ export const StyledSearchButton = styled.button`
   @media (min-width: 768px) {
     display: block;
     position: absolute;
-    border: none;
     padding: 0;
-    background-color: transparent;
-
     top: 18px;
     right: 24px;
-    cursor: pointer;
   }
 `;
 
@@ -114,7 +108,6 @@ export const StyledSelect = styled(Select)`
     outline: none;
     box-shadow: none;
     border-radius: 200px;
-    /* color: ${colors.light}; //#f3f3f3 */
     color: ${({ theme }) =>
       theme === 'dark' ? colors.light : colors.primaryDark};
     font-size: 14px;

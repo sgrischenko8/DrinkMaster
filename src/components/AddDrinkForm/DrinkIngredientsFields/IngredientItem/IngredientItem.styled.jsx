@@ -29,7 +29,6 @@ export const Input = styled.input`
       ? '1px solid #f3f3f350'
       : '1px solid #0A0A1150'};
   border-radius: 200px;
-  box-sizing: border-box;
   @media only screen and (min-width: 768px) {
     padding-left: 24px;
     width: 150px;
@@ -48,12 +47,11 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  padding: 0;
   margin-left: auto;
   font-size: 32px;
   font-weight: 400;
   border-radius: 50%;
-  border: none;
-  background-color: inherit;
   color: ${colors.light};
   transform: rotate(45deg);
   @media only screen and (min-width: 768px) {

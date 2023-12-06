@@ -16,7 +16,6 @@ export const PrivacyWrap = styled.div`
 
 export const MainTitle = styled.h1`
   color: ${colors.light};
-  font-size: 36px;
   margin-bottom: 40px;
 `;
 

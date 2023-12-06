@@ -39,8 +39,6 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
-  border-radius: 42px;
-  padding: 14px 40px;
   margin-bottom: 80px;
 `;
 

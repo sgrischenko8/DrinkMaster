@@ -51,9 +51,6 @@ export const Button = styled.button`
   transition: color 250ms ease;
   transition: transform 250ms ease;
 
-  background-color: inherit;
-  border: none;
-
   &.active {
     color: ${colors.light};
   }

@@ -4,26 +4,14 @@ import { colors } from 'src/colors';
 export const Container = styled.div`
   position: relative;
   width: 100%;
-  // margin: 0 auto;
-  padding: 0 20px;
 
-  box-sizing: border-box;
   overflow-y: hidden;
   ${({ theme }) => theme === 'light' && ` background: ${colors.light};`}
-
-  @media screen and (min-width: 768px) {
-    padding: 0 32px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 0 100px;
-  }
 `;
 
 export const Bubble1 = styled.div`
   position: absolute;
   border-radius: 50%;
-  // border: 10px solid red;
   background-color: #4070cd50;
   filter: blur(209.71px);
   z-index: 1;

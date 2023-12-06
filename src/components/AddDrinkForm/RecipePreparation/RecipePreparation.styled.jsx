@@ -42,7 +42,6 @@ export const Textarea = styled.textarea`
       : `1px solid ${({ theme }) =>
           theme === 'dark' ? `${colors.light}` : `${colors.primaryDark}`}`};
   border-radius: 14px;
-  box-sizing: border-box;
   @media only screen and (min-width: 768px) {
     padding: 14px 24px;
     width: 480px;

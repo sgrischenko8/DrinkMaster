@@ -6,10 +6,11 @@ export const ThemeToggle = styled.div`
   width: 40px;
   height: 20px;
   border-radius: 10px;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.10) inset;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
   ${({ theme }) =>
-    theme === 'dark' ?
-    `background: ${colors.light}` : ` background: ${colors.secondaryDark};`} 
+    theme === 'dark'
+      ? `background: ${colors.light}`
+      : ` background: ${colors.secondaryDark};`}
 `;
 
 export const TogglerBtn = styled.button`
@@ -19,13 +20,9 @@ export const TogglerBtn = styled.button`
   height: 18px;
   translate: 0 -50%;
   top: 50%;
-  cursor: pointer;
   transition: transform 300ms ease;
-  border: none;
 ${({ theme }) =>
-    theme === 'dark' ?
-    ` right: 1px; background: ${colors.secondaryDark};` : `left: 1px; background: ${colors.light};`} }
+  theme === 'dark'
+    ? ` right: 1px; background: ${colors.secondaryDark};`
+    : `left: 1px; background: ${colors.light};`} }
 `;
-
-
-

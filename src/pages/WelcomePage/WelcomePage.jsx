@@ -1,5 +1,4 @@
 import {
-  HeroImg,
   FlexContainer,
   Title,
   StyledCocktailIcon,
@@ -13,7 +12,6 @@ import { WelcomeBox } from 'src/components/WelcomeBox/WelcomeBox';
 export default function WelcomePage() {
   return (
     <WelcomeBox>
-      <HeroImg />
       <FlexContainer>
         <Title>Welcome to the app!!</Title>
         <StyledCocktailIcon />

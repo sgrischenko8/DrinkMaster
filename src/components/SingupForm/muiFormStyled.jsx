@@ -12,7 +12,6 @@ export const theme = createTheme({
 
 export const inputProps = {
   sx: {
-    
     opacity: 1,
     color: 'rgba(243, 243, 243, 0.50)',
     fontFamily: 'Manrope',
@@ -119,7 +118,6 @@ export const datePickerStyled = {
 
 export const outlineStyled = {
   '&.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-    
     borderColor: 'rgba(243, 243, 243, 0.20)',
   },
   backgroundColor: 'transparent',
@@ -159,13 +157,10 @@ export const buttonStyled = {
   mt: '28px',
   pt: '18px',
   pb: '18px',
-  fontFamily: 'Manrope',
-  fontSize: { mobile: '14px', tablet: '16px', desktop: '16px' },
-  fontWeight: 600,
-  lineHeight: '18px',
+
   textTransform: 'capitalize',
   border: '1px solid rgba(243, 243, 243, 0.2)',
-  borderRadius: '42px',
+
   background: '#F3F3F3',
   color: '#161F37',
   '&:hover': {
@@ -178,9 +173,6 @@ export const buttonStyled = {
 export const linkStyled = {
   mt: '14px',
   color: '#F3F3F3',
-  fontFamily: 'Manrope',
   fontSize: { mobile: '12px', tablet: '14px', desktop: '14px' },
-  fontWeight: 600,
-  lineHeight: { mobile: '16px', tablet: '18px', desktop: '18px' },
   textDecoration: 'underline',
 };

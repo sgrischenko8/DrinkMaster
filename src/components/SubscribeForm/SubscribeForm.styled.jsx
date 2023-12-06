@@ -12,7 +12,6 @@ export const Form = styled.form`
 export const SubscribeFormInput = styled.input`
   position: relative;
   width: 100%;
-  box-sizing: border-box;
   border-radius: 200px;
   border: 1px solid rgba(243, 243, 243, 0.2);
   background-color: transparent;
@@ -20,7 +19,7 @@ export const SubscribeFormInput = styled.input`
 
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
 
   padding-top: 16px;
   padding-right: 0px;
@@ -29,11 +28,11 @@ export const SubscribeFormInput = styled.input`
   text-indent: 22px;
 
   transition: border-color 250ms ease;
-  outline: none; 
+  outline: none;
 
   &:hover,
   &:focus {
-    border-color: rgba(243, 243, 243, 0.50);
+    border-color: rgba(243, 243, 243, 0.5);
   }
 
   @media screen and (min-width: 768px) {
@@ -45,7 +44,7 @@ export const SubscribeFormInput = styled.input`
 
   &.error {
     margin-bottom: 0;
-    border-color: rgba(218, 20, 20, 0.50);
+    border-color: rgba(218, 20, 20, 0.5);
     background-image: url('src/components/SubscribeForm/ic_baseline-error-outline.svg');
     background-repeat: no-repeat;
     background-position: right 14px center;
@@ -53,7 +52,7 @@ export const SubscribeFormInput = styled.input`
 
   &.valid {
     margin-bottom: 0;
-    border-color: rgba(60, 188, 129, 0.50);
+    border-color: rgba(60, 188, 129, 0.5);
     background-image: url('src/components/SubscribeForm/Done.svg');
     background-repeat: no-repeat;
     background-position: right 14px center;
@@ -64,7 +63,6 @@ export const SubscribeButton = styled.button`
   width: 100%;
   border-radius: 200px;
   border: 1px solid rgba(243, 243, 243, 0.2);
-  background-color: transparent;
   color: ${colors.light};
   padding-top: 17px;
   padding-right: 127px;
@@ -73,8 +71,7 @@ export const SubscribeButton = styled.button`
 
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
+  line-height: calc(18 / 16);
 
   // transition: transform 250ms ease;
 
@@ -91,27 +88,20 @@ export const SubscribeButton = styled.button`
   @media screen and (min-width: 768px) {
     font-size: 17px;
     line-height: 156%;
-    padding-top: 13.5px;
-    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-bottom: 15px;
     padding-left: 113px;
   }
 `;
 
-export const SubscribeTitle = styled.h3`
+export const SubscribeTitle = styled.p`
   color: ${colors.light};
   width: 335px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  line-height: calc(20 / 14);
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
-    width: 209px;
+    width: 309px;
+    line-height: calc(24 / 18);
   }
 `;
-
-
-
-
-
-

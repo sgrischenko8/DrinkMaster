@@ -65,7 +65,7 @@ export const DrinkPhoto = styled.img`
       180deg,
       rgba(10, 10, 17, 0.02) 51.18%,
       rgba(10, 10, 17, 0.77) 97.66%
-    ),    
+    ),
     lightgray 50% / cover no-repeat;
   transition: transform 0.3s ease;
   &:hover {
@@ -100,18 +100,14 @@ export const DrinkTitle = styled.h3`
 `;
 
 export const StyledLinkToDrinkPage = styled(Link)`
-  
-  text-align: right;
+  padding: 0;
   font-weight: 500;
-  line-height: 18px;
   transition: 250ms ease;
   ${({ theme }) =>
-      theme === 'dark'
-        ? `color: rgba(243, 243, 243, 0.5);`
-        : `color: rgba(10, 10, 17, 0.50);`}
-  @media only screen and (min-width: 768px) {
-    font-size: 16px;
-  }
+    theme === 'dark'
+      ? `color: rgba(243, 243, 243, 0.5);`
+      : `color: rgba(10, 10, 17, 0.50);`}
+
   &:hover {
     ${({ theme }) =>
       theme === 'dark'
@@ -121,13 +117,10 @@ export const StyledLinkToDrinkPage = styled(Link)`
 `;
 
 export const StyledLinkToDrinksPage = styled(Link)`
-  display: flex;
   width: 163px;
-  height: 46px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 42px;
-  font-weight: 600;
   transition: 250ms ease;
   ${({ theme }) =>
     theme === 'dark'
@@ -140,8 +133,6 @@ export const StyledLinkToDrinksPage = styled(Link)`
 
   @media only screen and (min-width: 768px) {
     width: 183px;
-    height: 54px;
-    font-size: 16px;
   }
 
   &:active {
