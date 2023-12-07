@@ -7,8 +7,11 @@ import {
 } from './Privacy.styled';
 
 export const Privacy = () => {
-  return (
-    <PrivacyWrap>
+  return (<div className={css.modal}>
+        <button className={css.modal_close_btn} onClick={() => onClose(null)}>
+          +
+        </button>
+         <PrivacyWrap>
       <MainTitle>Privacy Policy</MainTitle>
 
       <Title>
@@ -57,5 +60,7 @@ export const Privacy = () => {
         contact us using the contact details provided on our website.
       </PrivacyText>
     </PrivacyWrap>
+      </div>
+   
   );
 };
