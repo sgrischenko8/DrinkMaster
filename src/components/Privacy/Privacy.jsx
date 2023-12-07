@@ -1,4 +1,4 @@
-import {
+import {PrivacyContainer,CloseBtn,
   PrivacyWrap,
   MainTitle,
   Title,
@@ -6,11 +6,11 @@ import {
   PrivacyText,
 } from './Privacy.styled';
 
-export const Privacy = () => {
-  return (<div className={css.modal}>
-        <button className={css.modal_close_btn} onClick={() => onClose(null)}>
+export const Privacy = ({onClose}) => {
+  return (<PrivacyContainer>
+        <CloseBtn onClick={() => onClose(null)}>
           +
-        </button>
+        </CloseBtn>
          <PrivacyWrap>
       <MainTitle>Privacy Policy</MainTitle>
 
@@ -60,7 +60,7 @@ export const Privacy = () => {
         contact us using the contact details provided on our website.
       </PrivacyText>
     </PrivacyWrap>
-      </div>
+      </PrivacyContainer>
    
   );
 };
