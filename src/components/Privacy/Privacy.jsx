@@ -1,5 +1,5 @@
-import {PrivacyContainer,CloseBtn,
-  PrivacyWrap,
+import {
+  PrivacyWrap,CloseBtn,
   MainTitle,
   Title,
   SubTitle,
@@ -7,11 +7,11 @@ import {PrivacyContainer,CloseBtn,
 } from './Privacy.styled';
 
 export const Privacy = ({onClose}) => {
-  return (<PrivacyContainer>
-        <CloseBtn onClick={() => onClose(null)}>
+  return (
+        
+         <PrivacyWrap><CloseBtn onClick={() => onClose(null)}>
           +
         </CloseBtn>
-         <PrivacyWrap>
       <MainTitle>Privacy Policy</MainTitle>
 
       <Title>
@@ -60,7 +60,7 @@ export const Privacy = ({onClose}) => {
         contact us using the contact details provided on our website.
       </PrivacyText>
     </PrivacyWrap>
-      </PrivacyContainer>
+      
    
   );
 };
