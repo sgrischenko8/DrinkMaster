@@ -13,8 +13,10 @@ export const Modal = ({ onClose, content }) => {
     }
 
     window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'auto';
     };
   }, [onClose]);
 
@@ -28,13 +30,8 @@ export const Modal = ({ onClose, content }) => {
   };
 
   return createPortal(
-    <div className={css.overlay} onMouseDown={handleBackdropClick}>
-      <div className={css.modal}>
-        <button className={css.modal_close_btn} onClick={() => onClose(null)}>
-          +
-        </button>
-        {content}
-      </div>
+    <div className={css.overlay} onMouseDown={handleBackdropClick}>      
+        {content}      
     </div>,
     modalRoot,
   );
