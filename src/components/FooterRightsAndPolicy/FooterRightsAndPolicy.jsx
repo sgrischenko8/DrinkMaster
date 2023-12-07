@@ -28,10 +28,9 @@ export const FooterRightsAndPolicy = () => {
           Terms of Service
         </Button>
         {whatModalIsOpen && (
-          <Modal
-            onClose={setWhatModalIsOpen}
+          <Modal onClose={setWhatModalIsOpen}  
             content={
-              whatModalIsOpen === 'Privacy' ? <Privacy /> : <TermsOfService />
+              whatModalIsOpen === 'Privacy' ? <Privacy onClose={setWhatModalIsOpen} /> : <TermsOfService onClose={setWhatModalIsOpen} />
             }
           ></Modal>
         )}
