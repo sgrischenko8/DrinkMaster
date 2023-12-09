@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { Modal } from 'src/components/Modal/Modal';
 import { Privacy } from 'src/components/Footer/FooterRightsAndPolicy/Privacy';
 import { TermsOfService } from 'src/components/Footer/FooterRightsAndPolicy/TermsOfService';
-import sprite from '../../images/sprite.svg';
+import sprite from '../../../images/sprite.svg';
 
 export const FooterRightsAndPolicy = () => {
   const [whatModalIsOpen, setWhatModalIsOpen] = useState(null);

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme, selectTheme } from '../../../redux/theme/themeSlice';
+import { toggleTheme, selectTheme } from 'src/redux/theme/themeSlice';
 import { Label, Toggler } from './ThemeToggler.styled';
 
 export const ThemeToggler = () => {

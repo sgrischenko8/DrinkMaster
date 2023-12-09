@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
-import { subscribeEmail } from '../../../redux/auth/operations';
+import { subscribeEmail } from 'src/redux/auth/operations';
 import {
   Form,
   SubscribeFormInput,

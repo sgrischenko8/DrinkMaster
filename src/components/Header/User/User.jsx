@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUser } from '../../../redux/auth/selectors';
-import { logOut, updateUser } from '../../../redux/auth/operations';
-import { selectTheme } from '../../../redux/theme/themeSlice';
+import { selectUser } from 'src/redux/auth/selectors';
+import { logOut, updateUser } from 'src/redux/auth/operations';
+import { selectTheme } from 'src/redux/theme/themeSlice';
 import { Modal } from '../../Modal/Modal';
 import {
   UserLogoDiv,
@@ -27,8 +27,8 @@ import {
   Form,
   LogoutModalFrame,
 } from './User.styled';
-import userLogoImg from '../../images/user.svg';
-import sprite from '../../images/sprite.svg';
+import userLogoImg from '../../../images/user.svg';
+import sprite from '../../../images/sprite.svg';
 
 export const User = () => {
   const dispatch = useDispatch();
