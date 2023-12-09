@@ -1,4 +1,4 @@
-import{o as n,j as e,v as j,I as ai,r as I,J as A,f as Y,d as D,K as li,u as ti,M as si,O as di,P as ci,Q as pi,S as R,T as hi,U as xi,V as gi,X as mi,n as v,N as fi,w as oi,Y as ui,Z as yi}from"./index-9a8ab8da.js";import{n as r}from"./emotion-styled.browser.esm-95f23894.js";import{j as bi,k as wi,l as q,d as ri,m as ki,n as $i,o as ji,P as vi}from"./dummyDrinkThumb-69250d19.js";import{S as Di}from"./react-select.esm-03422472.js";import"./emotion-element-c39617d8.browser.esm-1ba35024.js";import"./assertThisInitialized-88534571.js";const Ai=r.div`
+import{o as n,j as e,v as j,I as ai,r as I,J as A,f as Y,d as D,K as li,u as ti,M as si,O as di,P as ci,Q as pi,S as R,T as hi,U as xi,V as gi,X as mi,n as v,N as fi,w as oi,Y as ui,Z as yi}from"./index-a8fd8fe1.js";import{n as r}from"./emotion-styled.browser.esm-99aa081c.js";import{j as bi,k as wi,l as q,d as ri,m as ki,n as $i,o as ji,P as vi}from"./dummyDrinkThumb-83586294.js";import{S as Di}from"./react-select.esm-75eccd21.js";import"./emotion-element-c39617d8.browser.esm-9b76b9a4.js";import"./assertThisInitialized-ba4b1538.js";const Ai=r.div`
   display: flex;
   flex-direction: column;
   row-gap: 80px;
@@ -101,12 +101,12 @@ import{o as n,j as e,v as j,I as ai,r as I,J as A,f as Y,d as D,K as li,u as ti,
   display: flex;
   gap: 170px;
   align-items: center;
-  font-weight: bold;
+  font-weight: 700;
   color: rgba(243, 243, 243, 0.75);
 `,G=r.label`
   width: 70px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   color: rgba(243, 243, 243, 0.75);
   cursor: pointer;
   :hover {
@@ -121,8 +121,8 @@ import{o as n,j as e,v as j,I as ai,r as I,J as A,f as Y,d as D,K as li,u as ti,
   align-items: center;
   width: 50px;
   height: 50px;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 400;
   background-color: ${n.light};
   color: #161f37;
   border-radius: 6px;
@@ -141,7 +141,7 @@ import{o as n,j as e,v as j,I as ai,r as I,J as A,f as Y,d as D,K as li,u as ti,
   display: none;
 `,Pi=r.span`
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 1.25;
   color: ${n.light};
 `,qi=r.div`
