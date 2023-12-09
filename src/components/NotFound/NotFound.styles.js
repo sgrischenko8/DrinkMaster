@@ -3,8 +3,6 @@ import { colors } from '../../colors';
 
 export const NotFoundWrapper = styled.div`
   margin-top: 91px;
-  /* margin-left: auto;
-  margin-right: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,13 +19,10 @@ export const NotFoundWrapper = styled.div`
 export const TextMessage = styled.p`
   margin-top: 32px;
   color: ${colors.light};
-  font-family: Manrope;
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.29;
 
   @media (min-width: 768px) {
     font-size: 16px;
-    line-height: 1.38;
+    line-height: calc(18 / 16);
   }
 `;

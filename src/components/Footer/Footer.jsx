@@ -1,15 +1,14 @@
 import { Logo } from '../Logo/Logo';
-import FooterNav from '../FooterNav/FooterNav';
 import FollowUs from '../FollowUs/FollowUs';
-import SubscribeForm from '../SubscribeForm/SubscribeForm';
-import { FooterRightsAndPolicy } from '../FooterRightsAndPolicy/FooterRightsAndPolicy';
-
+import SubscribeForm from './SubscribeForm/SubscribeForm';
+import { FooterRightsAndPolicy } from './FooterRightsAndPolicy/FooterRightsAndPolicy';
+import { Navigation } from '../Navigation/Navigation';
 import {
   FooterContainer,
-  MainWrap,
-  LogoFollowWrap,
-  LogoFollowNavWrap,
   Container,
+  MainWrap,
+  FlexContainer,
+  BrandLinksDiv,
 } from './Footer.styled';
 
 const Footer = () => {
@@ -17,13 +16,14 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <MainWrap>
-          <LogoFollowNavWrap>
-            <LogoFollowWrap>
+          <FlexContainer>
+            <BrandLinksDiv>
               <Logo theme="dark" />
               <FollowUs theme="dark" />
-            </LogoFollowWrap>
-            <FooterNav />
-          </LogoFollowNavWrap>
+            </BrandLinksDiv>
+            <Navigation isopen={false} location={'footer'} theme={'dark'} />
+          </FlexContainer>
+
           <SubscribeForm />
         </MainWrap>
         <FooterRightsAndPolicy />

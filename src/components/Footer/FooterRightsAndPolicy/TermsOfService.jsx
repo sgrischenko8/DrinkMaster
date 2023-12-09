@@ -1,9 +1,4 @@
-import {
-  MainTitle,
-  Title,
-  SubTitle,
-  PrivacyText,
-} from '../Privacy/Privacy.styled';
+import { MainTitle, Title, SubTitle, PrivacyText } from './Privacy.styled';
 
 export const TermsOfService = () => {
   return (

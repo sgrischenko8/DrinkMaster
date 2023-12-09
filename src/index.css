@@ -26,21 +26,6 @@ main {
   margin: 0 auto;
   padding: 80px 20px;
   min-height: calc(100vh - 84px);
-
-  @media screen and (max-width: 767px) {
-    width: 375px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 140px 32px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 1440px;
-    padding: 160px 100px 140px;
-    /* overflow: visible; */
-  }
 }
 
 h1 {

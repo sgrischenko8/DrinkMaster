@@ -1,31 +1,31 @@
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
-import { subscribeEmail } from "../../redux/auth/operations";
+import { subscribeEmail } from '../../../redux/auth/operations';
 import {
   Form,
   SubscribeFormInput,
   SubscribeButton,
   SubscribeTitle,
-} from "./SubscribeForm.styled";
+} from './SubscribeForm.styled';
 
 const schema = Yup.object().shape({
   email: Yup.string()
-    .required("Email is required")
-    .email("This is an ERROR email"),
+    .required('Email is required')
+    .email('This is an ERROR email'),
 });
 
 const ErrorMessage = ({ message }) => (
   <div
     style={{
-      color: "#DA1414",
-      fontSize: "12px",
-      lineHeight: "14px",
-      marginTop: "2px",
-      marginBottom: "2px",
-      marginLeft: "24px",
+      color: '#DA1414',
+      fontSize: '12px',
+      lineHeight: '14px',
+      marginTop: '2px',
+      marginBottom: '2px',
+      marginLeft: '24px',
     }}
   >
     {message}
@@ -35,12 +35,12 @@ const ErrorMessage = ({ message }) => (
 const SuccessMessage = () => (
   <div
     style={{
-      color: "#3CBC81",
-      fontSize: "12px",
-      lineHeight: "14px",
-      marginTop: "2px",
-      marginBottom: "2px",
-      marginLeft: "24px",
+      color: '#3CBC81',
+      fontSize: '12px',
+      lineHeight: '14px',
+      marginTop: '2px',
+      marginBottom: '2px',
+      marginLeft: '24px',
     }}
   >
     This is an CORRECT email
@@ -53,7 +53,7 @@ const SubscribeForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "",
+      email: '',
     },
     validationSchema: schema,
     onSubmit: (values, actions) => {
@@ -77,7 +77,7 @@ const SubscribeForm = () => {
         name="email"
         type="email"
         placeholder="Enter the email"
-        onChange={e => {
+        onChange={(e) => {
           formik.handleChange(e);
           if (schema.isValidSync({ email: e.target.value })) {
             setIsEmailValid(true);
@@ -87,7 +87,7 @@ const SubscribeForm = () => {
         }}
         value={formik.values.email}
         onBlur={formik.handleBlur}
-        className={isEmailError ? "error" : isEmailValid ? "valid" : ""}
+        className={isEmailError ? 'error' : isEmailValid ? 'valid' : ''}
       />
 
       {isEmailError ? (

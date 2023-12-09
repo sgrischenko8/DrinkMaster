@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUser } from '../../redux/auth/selectors';
-import { logOut, updateUser } from '../../redux/auth/operations';
-import { selectTheme } from '../../redux/theme/themeSlice';
-import { Modal } from '../Modal/Modal';
+import { selectUser } from '../../../redux/auth/selectors';
+import { logOut, updateUser } from '../../../redux/auth/operations';
+import { selectTheme } from '../../../redux/theme/themeSlice';
+import { Modal } from '../../Modal/Modal';
 import {
   UserLogoDiv,
   UserImg,
@@ -144,7 +144,7 @@ export const User = () => {
               <LogoutModalFrame>
                 <CloseBtn onClick={() => setIsSubmitLogoutModalOpen(false)}>
                   <svg width="32px" height="32px" stroke="#F3F3F3">
-                    <use href={`${sprite}#icon-close`} />
+                    <use href={`${sprite}#close`} />
                   </svg>
                 </CloseBtn>
                 <Text>Are you sure you want to log out?</Text>

@@ -11,7 +11,7 @@ import {
 } from 'src/redux/drinks/selectors';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import { Loader } from 'src/components/Loader/Loader';
-import NotFound from 'src/components/NotFound/NotFound';
+import { NotFound } from 'src/components/NotFound/NotFound';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 import Paginator from 'src/components/Paginator/Paginator';
 

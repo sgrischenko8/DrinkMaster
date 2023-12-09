@@ -2,7 +2,7 @@ import notFoundDesk from 'src/images/img-blue-iced-tea-desktop.png';
 import notFoundDesk2 from 'src/images/img-blue-iced-tea-desktop@2x.png';
 import { NotFoundWrapper, TextMessage } from './NotFound.styles';
 
-const NotFound = ({ message }) => {
+export const NotFound = ({ message }) => {
   return (
     <NotFoundWrapper>
       <picture>
@@ -30,5 +30,3 @@ const NotFound = ({ message }) => {
     </NotFoundWrapper>
   );
 };
-
-export default NotFound;

@@ -53,14 +53,14 @@ export const DivTranslucent = styled.div`
   display: flex;
   gap: 170px;
   align-items: center;
-  font-weight: bold;
+  font-weight: 700;
   color: rgba(243, 243, 243, 0.75);
 `;
 
 export const LabelTranslucent = styled.label`
   width: 70px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   color: rgba(243, 243, 243, 0.75);
   cursor: pointer;
   :hover {
@@ -77,8 +77,8 @@ export const Label = styled.label`
   align-items: center;
   width: 50px;
   height: 50px;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 400;
   background-color: ${colors.light};
   color: #161f37;
   border-radius: 6px;
@@ -100,7 +100,7 @@ export const HiddenInput = styled.input`
 
 export const SpanAddImage = styled.span`
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 1.25;
   color: ${colors.light};
 `;

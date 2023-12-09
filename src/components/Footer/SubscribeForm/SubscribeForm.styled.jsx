@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../colors';
+import { colors } from '../../../colors';
 
 export const Form = styled.form`
   width: 335px;
@@ -102,6 +102,7 @@ export const SubscribeTitle = styled.p`
 
   @media screen and (min-width: 768px) {
     width: 309px;
+    font-size: 18px;
     line-height: calc(24 / 18);
   }
 `;

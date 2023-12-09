@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 import {
   selectOwnDrinks,
   selectFavoriteDrinks,
-} from '../../redux/drinks/selectors';
-import { selectTheme } from '../../redux/theme/themeSlice';
-import NotFound from '../NotFound/NotFound';
+} from 'src/redux/drinks/selectors';
+import { selectTheme } from 'src/redux/theme/themeSlice';
+import { NotFound } from '../NotFound/NotFound';
 
 export const DrinksList = () => {
   const listOfOwnDrinks = useSelector(selectOwnDrinks);

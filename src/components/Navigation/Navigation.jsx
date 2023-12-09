@@ -4,8 +4,6 @@ import {
   NavListItem,
   StyledNavigationLink,
 } from './Navigation.styled';
-import { selectTheme } from 'src/redux/theme/themeSlice';
-import { useSelector } from 'react-redux';
 
 import {
   BubbleWelcome1,
@@ -13,9 +11,7 @@ import {
 } from 'src/components/WelcomeBox/WelcomeBox.styled';
 import { Bubble2 } from 'src/components/MainAppContainer/MainAppContainer.styled';
 
-export const Navigation = ({ isOpen, setIsMenuOpen, location }) => {
-  const theme = useSelector(selectTheme);
-
+export const Navigation = ({ isOpen, setIsMenuOpen, location, theme }) => {
   const navList = [
     ['Home', '/home'],
     ['Drinks', '/drinks'],
@@ -24,20 +20,19 @@ export const Navigation = ({ isOpen, setIsMenuOpen, location }) => {
     ['Favorites', '/favorites'],
   ];
   if (location === 'footer') {
-    navList.slice(0, 1);
+    navList.shift();
   }
-
-  console.log(isOpen);
 
   return (
     <div>
-      <Nav isOpen={isOpen} theme={theme}>
-        <NavigationList isOpen={isOpen}>
+      <Nav isopen={isOpen} theme={theme} location={location}>
+        <NavigationList location={location} isopen={isOpen}>
           {navList.map((el) => (
-            <NavListItem key={el[0]}>
+            <NavListItem key={el[0]} location={location}>
               <StyledNavigationLink
                 to={el[1]}
                 theme={theme}
+                location={location}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {el[0]}

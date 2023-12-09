@@ -11,7 +11,7 @@ import {
   StyledDrinksItem,
   StyledDrinksList,
 } from './DrinksList.styled';
-import NotFound from 'src/components/NotFound/NotFound';
+import { NotFound } from 'src/components/NotFound/NotFound';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
 const DrinksList = () => {

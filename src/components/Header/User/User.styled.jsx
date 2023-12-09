@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../colors';
+import { colors } from '../../../colors';
 import { ReactComponent as UserIcon } from 'src/images/user.svg';
 
 export const UserLogoDiv = styled.div`

@@ -14,7 +14,8 @@ export const Bubble1 = styled.div`
   border-radius: 50%;
   background-color: #4070cd50;
   filter: blur(109.71px);
-  z-index: 50;
+  z-index: 1;
+  pointer-events: none;
 
   bottom: -749px;
   left: 180px;

@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { selectTheme } from '../../redux/theme/themeSlice';
 import { Logo } from '../Logo/Logo';
 import { Navigation } from '../Navigation/Navigation';
-import { ThemeToggler } from '../ThemeToggler/ThemeToggler';
-import { User } from '../User/User';
+import { ThemeToggler } from './ThemeToggler/ThemeToggler';
+import { User } from './User/User';
 import {
   HeaderContainer,
   FlexContainer,
@@ -56,6 +56,7 @@ export const Header = () => {
           isOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
           location={'header'}
+          theme={theme}
         />
       ) : null}
       <FlexContainer>
@@ -65,7 +66,7 @@ export const Header = () => {
           <>
             {isMenuOpen ? (
               <SvgClose theme={theme} onClick={toggleMenu}>
-                <use href={`${sprite}#icon-close`} />
+                <use href={`${sprite}#close`} />
               </SvgClose>
             ) : (
               <BurgerIcon theme={theme} onClick={toggleMenu}>
