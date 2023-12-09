@@ -1,4 +1,4 @@
-import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z as f,A as w,C as M,D as Q,E as T,w as F}from"./index-371cd3a7.js";import{c as j,d as N,e as _,f as I,g as A,h as O,i as W,P as R}from"./dummyDrinkThumb-59786c5d.js";import{N as q,P as B}from"./Paginator-43c919a7.js";import{S as Z}from"./react-select.esm-e71f1715.js";import{u as C}from"./useMediaQuery-135ed3de.js";import"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import"./ButtonBase-5913b94c.js";import"./emotion-element-c39617d8.browser.esm-d578ff43.js";import"./assertThisInitialized-6d48262d.js";import"./emotion-styled.browser.esm-502ac5c3.js";import"./getThemeProps-b46db884.js";import"./useTheme-38bc9d80.js";const G=a.ul`
+import{n as a,o as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A as b,C as f,D as w,E as F,F as T,G as M,y as N}from"./index-9a8ab8da.js";import{c as j,d as A,e as _,f as I,g as O,h as R,i as W,P as q}from"./dummyDrinkThumb-69250d19.js";import{N as B,P as G}from"./Paginator-023308a5.js";import{S as H}from"./react-select.esm-03422472.js";import{u as v}from"./useMediaQuery-18338eaf.js";import"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import"./ButtonBase-bfdc40a5.js";import"./emotion-element-c39617d8.browser.esm-1ba35024.js";import"./assertThisInitialized-88534571.js";import"./emotion-styled.browser.esm-95f23894.js";import"./getThemeProps-a69ef6bc.js";import"./useTheme-3c125e77.js";const J=a.ul`
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -10,12 +10,12 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
     flex-wrap: wrap;
     column-gap: 20px;
   }
-`,H=a.li`
+`,K=a.li`
   margin-bottom: 28px;
   @media (min-width: 768px) {
     margin-bottom: 40px;
   }
-`,J=a.img`
+`,U=a.img`
   width: 335px;
   height: 360px;
   border-radius: 8px;
@@ -29,11 +29,11 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
     width: 400px;
     height: 400px;
   }
-`,K=a.div`
+`,V=a.div`
   margin-top: 14px;
   display: flex;
   justify-content: space-between;
-`,U=a.p`
+`,X=a.p`
   margin: 0;
   /* color: ${t.light}; //#f3f3f3 */
   color: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
@@ -44,7 +44,7 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
     font-size: 18px;
     line-height: 1.34;
   }
-`,V=a(P)`
+`,Y=a(E)`
   color: ${({theme:e})=>e==="dark"?"rgba(243, 243, 243, 0.5)":"rgba(10, 10, 17, 0.5)"};
 
   font-weight: 500;
@@ -55,7 +55,7 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
     /* color: ${t.light}; //#f3f3f3; */
     color: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
   }
-`,X=()=>{const{drinks:e}=s(j),o=s(k);return(e==null?void 0:e.length)!==0?r.jsx(G,{children:e==null?void 0:e.map(c=>r.jsxs(H,{children:[r.jsx(J,{src:c.drinkThumb,alt:c.drink,loading:"lazy",onError:p=>{p.currentTarget.src=N}}),r.jsxs(K,{children:[r.jsx(U,{theme:o,children:c.drink}),r.jsx(V,{theme:o,to:`/drink/${c._id}`,children:"See more"})]})]},c._id))}):r.jsx(q,{message:"No cocktails found for your request"})},Y=e=>d.createElement("svg",{width:20,height:20,viewBox:"0 0 20 20",fill:"none",xmlns:"http://www.w3.org/2000/svg",...e},d.createElement("path",{d:"M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"}),d.createElement("path",{d:"M17.5 17.5L13.875 13.875",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"})),ee=a.div`
+`,Z=()=>{const{drinks:e}=s(j),o=s(k);return(e==null?void 0:e.length)!==0?r.jsx(J,{children:e==null?void 0:e.map(c=>r.jsxs(K,{children:[r.jsx(U,{src:c.drinkThumb,alt:c.drink,loading:"lazy",onError:d=>{d.currentTarget.src=A}}),r.jsxs(V,{children:[r.jsx(X,{theme:o,children:c.drink}),r.jsx(Y,{theme:o,to:`/drink/${c._id}`,children:"See more"})]})]},c._id))}):r.jsx(B,{message:"No cocktails found for your request"})},ee=a.div`
   margin-top: 40px;
   @media (min-width: 768px) {
     margin-top: 60px;
@@ -125,11 +125,10 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
     top: 18px;
     right: 24px;
   }
-`,ne=a(Y)`
+`,ne=a.svg`
   display: block;
-  /* stroke: ${t.light}; //#f3f3f3 */
   stroke: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
-`,S=a(Z)`
+`,S=a(H)`
   .react-select__control {
     width: 335px;
     height: 54px;
@@ -250,4 +249,4 @@ import{s as a,n as t,L as P,q as s,t as k,j as r,r as d,u as $,x as y,y as b,z a
       cursor: pointer;
     }
   }
-`,D={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.light:"rgba(243, 243, 243, 0.4)"})},ae={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.primaryDark:"rgba(10, 10, 17, 0.4)"})},se=()=>{const[e,o]=d.useState(""),c=s(_),p=s(I),l=s(k),x=c.length!==0?["All categories",...c]:[],m=p.length!==0?[{title:"All ingredients"},...p]:[],i=$(),u=C("(max-width:767px)");d.useEffect(()=>{u&&i(y(e))},[i,u,e]);const h=(n,g="")=>{switch(n){case"searchQuery":o(g),i(f(1));break;case"category":if(g==="All categories"){i(w(""));return}i(w(g)),i(f(1));break;case"ingredient":if(g==="All ingredients"){i(b(""));return}i(b(g)),i(f(1));break}},v=n=>{h("searchQuery",n.target.value.trim())},L=n=>{h("category",n.value)},z=n=>{h("ingredient",n.value)},E=n=>{n.preventDefault(),i(y(e))};return r.jsx(ee,{children:r.jsxs(te,{onSubmit:E,children:[r.jsxs(re,{children:[r.jsx(oe,{type:"text",placeholder:"Enter the text",onChange:v,theme:l}),r.jsx(ie,{type:"submit",children:r.jsx(ne,{theme:l})})]}),r.jsx(S,{name:"category",placeholder:"All categories",classNamePrefix:"react-select",styles:l==="dark"?D:ae,theme:l,noOptionsMessage:()=>"No categories",options:x.map(n=>({label:n,value:n})),onChange:L}),r.jsx(S,{name:"ingredient",styles:D,theme:l,placeholder:"Ingredients",classNamePrefix:"react-select",noOptionsMessage:()=>"No ingredients",options:m.map(n=>({label:n.title,value:n.title})),onChange:z})]})})},be=()=>{const e=s(_),o=s(I),c=s(j),p=s(A),l=s(O),x=s(W),m=s(k),i=$(),h=C("(min-width:769px)")?9:10;return d.useEffect(()=>{e.length||i(M())},[e,i]),d.useEffect(()=>{o.length||i(Q())},[i,o]),d.useEffect(()=>{i(T({searchQuery:l,page:p,limit:h}))},[i,h,p,l]),r.jsxs(r.Fragment,{children:[r.jsx(R,{title:"Drinks",theme:m}),r.jsx(se,{}),x?r.jsx(F,{}):r.jsxs(r.Fragment,{children:[r.jsx(X,{}),r.jsx(B,{totalItems:c.max_page,limit:h})]})]})};export{be as default};
+`,D={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.light:"rgba(243, 243, 243, 0.4)"})},ae={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.primaryDark:"rgba(10, 10, 17, 0.4)"})},se=()=>{const[e,o]=h.useState(""),c=s(_),d=s(I),l=s(k),x=c.length!==0?["All categories",...c]:[],m=d.length!==0?[{title:"All ingredients"},...d]:[],i=$(),u=v("(max-width:767px)");h.useEffect(()=>{u&&i(y(e))},[i,u,e]);const p=(n,g="")=>{switch(n){case"searchQuery":o(g),i(f(1));break;case"category":if(g==="All categories"){i(w(""));return}i(w(g)),i(f(1));break;case"ingredient":if(g==="All ingredients"){i(b(""));return}i(b(g)),i(f(1));break}},C=n=>{p("searchQuery",n.target.value.trim())},z=n=>{p("category",n.value)},L=n=>{p("ingredient",n.value)},P=n=>{n.preventDefault(),i(y(e))};return r.jsx(ee,{children:r.jsxs(te,{onSubmit:P,children:[r.jsxs(re,{children:[r.jsx(oe,{type:"text",placeholder:"Enter the text",onChange:C,theme:l}),r.jsx(ie,{type:"submit",children:r.jsx(ne,{theme:l,children:r.jsx("use",{href:`${Q}#search`})})})]}),r.jsx(S,{name:"category",placeholder:"All categories",classNamePrefix:"react-select",styles:l==="dark"?D:ae,theme:l,noOptionsMessage:()=>"No categories",options:x.map(n=>({label:n,value:n})),onChange:z}),r.jsx(S,{name:"ingredient",styles:D,theme:l,placeholder:"Ingredients",classNamePrefix:"react-select",noOptionsMessage:()=>"No ingredients",options:m.map(n=>({label:n.title,value:n.title})),onChange:L})]})})},be=()=>{const e=s(_),o=s(I),c=s(j),d=s(O),l=s(R),x=s(W),m=s(k),i=$(),p=v("(min-width:769px)")?9:10;return h.useEffect(()=>{e.length||i(F())},[e,i]),h.useEffect(()=>{o.length||i(T())},[i,o]),h.useEffect(()=>{i(M({searchQuery:l,page:d,limit:p}))},[i,p,d,l]),r.jsxs(r.Fragment,{children:[r.jsx(q,{title:"Drinks",theme:m}),r.jsx(se,{}),x?r.jsx(N,{}):r.jsxs(r.Fragment,{children:[r.jsx(Z,{}),r.jsx(G,{totalItems:c.max_page,limit:p})]})]})};export{be as default};
