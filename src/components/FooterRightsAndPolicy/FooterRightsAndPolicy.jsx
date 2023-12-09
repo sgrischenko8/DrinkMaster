@@ -3,6 +3,8 @@ import {
   AllRightsText,
   PolicyLinksWrap,
   Button,
+  PrivacyWrap,
+  CloseBtn,
 } from './FooterRightsAndPolicy.styled';
 import { useState } from 'react';
 import { Modal } from 'src/components/Modal/Modal';
@@ -28,11 +30,16 @@ export const FooterRightsAndPolicy = () => {
           Terms of Service
         </Button>
         {whatModalIsOpen && (
-          <Modal onClose={setWhatModalIsOpen}  
-            content={
-              whatModalIsOpen === 'Privacy' ? <Privacy onClose={setWhatModalIsOpen} /> : <TermsOfService onClose={setWhatModalIsOpen} />
-            }
-          ></Modal>
+          <Modal onClose={setWhatModalIsOpen}>
+            <PrivacyWrap>
+              <CloseBtn onClick={() => setWhatModalIsOpen(null)}>+</CloseBtn>
+              {whatModalIsOpen === 'Privacy' ? (
+                <Privacy onClose={setWhatModalIsOpen} />
+              ) : (
+                <TermsOfService onClose={setWhatModalIsOpen} />
+              )}
+            </PrivacyWrap>
+          </Modal>
         )}
       </PolicyLinksWrap>
     </RightsAndPolicyWrap>

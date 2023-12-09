@@ -1,11 +1,9 @@
 import { LoaderWrap, CocktailIcon } from './Loader.styled';
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <LoaderWrap>
       <CocktailIcon />
     </LoaderWrap>
   );
 };
-
-export default Loader;

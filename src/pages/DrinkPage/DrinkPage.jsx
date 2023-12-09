@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import DrinkPageHero from '../../components/DrinkDetails/DrinkPageHero/DrinkPageHero';
 import DrinkIngredientsList from '../../components/DrinkDetails/DrinkIngredientsList/DrinkIngredientsList';
 import RecipePreparation from '../../components/DrinkDetails/RecipePreparation/RecipePreparation';
-import Loader from 'src/components/Loader/Loader';
+import { Loader } from 'src/components/Loader/Loader';
 import {
   selectDrinkById,
   selectDrinkDetailsError,

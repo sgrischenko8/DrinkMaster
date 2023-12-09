@@ -1,12 +1,12 @@
 import { lazy, useEffect, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes, Outlet } from 'react-router-dom';
-import SharedLayout from './components/SharedLayout/SharedLayout';
-import { PublicRoute } from './components/PublicRoute/PublicRoute';
-import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { refreshUser } from './redux/auth/operations';
-import Loader from 'src/components/Loader/Loader';
+import SharedLayout from './components/SharedLayout';
+import { PublicRoute } from './components/PublicRoute/PublicRoute';
+import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+import { Loader } from './components/Loader/Loader';
 
 const WelcomePage = lazy(() => import('./pages/WelcomePage/WelcomePage'));
 const SingupPage = lazy(() => import('./pages/SingupPage/SingupPage'));

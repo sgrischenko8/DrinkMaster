@@ -1,17 +1,8 @@
-import {
-  PrivacyWrap,CloseBtn,
-  MainTitle,
-  Title,
-  SubTitle,
-  PrivacyText,
-} from './Privacy.styled';
+import { MainTitle, Title, SubTitle, PrivacyText } from './Privacy.styled';
 
-export const Privacy = ({onClose}) => {
+export const Privacy = () => {
   return (
-        
-         <PrivacyWrap><CloseBtn onClick={() => onClose(null)}>
-          +
-        </CloseBtn>
+    <>
       <MainTitle>Privacy Policy</MainTitle>
 
       <Title>
@@ -59,8 +50,6 @@ export const Privacy = ({onClose}) => {
         concerns regarding this Privacy Policy or your information, please
         contact us using the contact details provided on our website.
       </PrivacyText>
-    </PrivacyWrap>
-      
-   
+    </>
   );
 };

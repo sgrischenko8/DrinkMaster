@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchOwnDrinks } from '../../redux/drinks/operations';
-import { DrinksList } from '../../components/DrinksList/DrinksList';
+import { fetchOwnDrinks } from 'src/redux/drinks/operations';
+import { DrinksList } from 'src/components/DrinksList/DrinksList';
 import {
   selectErrorOwn,
   selectIsLoadingOwn,
@@ -11,10 +11,11 @@ import {
 } from 'src/redux/drinks/selectors';
 
 import PageTitle from 'src/components/PageTitle/PageTitle';
-import Loader from 'src/components/Loader/Loader';
-import NotFound from '../../components/NotFound/NotFound';
-import { selectTheme } from '../../redux/theme/themeSlice';
+import { Loader } from 'src/components/Loader/Loader';
+import NotFound from 'src/components/NotFound/NotFound';
+import { selectTheme } from 'src/redux/theme/themeSlice';
 import Paginator from 'src/components/Paginator/Paginator';
+
 const MyDrinksPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoadingOwn);

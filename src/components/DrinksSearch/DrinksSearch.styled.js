@@ -1,6 +1,5 @@
 import Select from 'react-select';
 import styled from 'styled-components';
-import { ReactComponent as SearchIcon } from 'src/images/searchIcon.svg';
 import { colors } from '../../colors';
 
 export const StyledSearchWrapper = styled.div`
@@ -89,9 +88,8 @@ export const StyledSearchButton = styled.button`
   }
 `;
 
-export const StyledSearchIcon = styled(SearchIcon)`
+export const StyledSearchIcon = styled.svg`
   display: block;
-  /* stroke: ${colors.light}; //#f3f3f3 */
   stroke: ${({ theme }) =>
     theme === 'dark' ? colors.light : colors.primaryDark};
 `;

@@ -8,13 +8,16 @@ import {
   Signin,
 } from './WelcomePage.styled';
 import { WelcomeBox } from 'src/components/WelcomeBox/WelcomeBox';
+import sprite from '../../images/sprite.svg';
 
 export default function WelcomePage() {
   return (
     <WelcomeBox>
       <FlexContainer>
         <Title>Welcome to the app!!</Title>
-        <StyledCocktailIcon />
+        <StyledCocktailIcon>
+          <use href={`${sprite}#cocktail`} />
+        </StyledCocktailIcon>
       </FlexContainer>
 
       <WelcomeText>

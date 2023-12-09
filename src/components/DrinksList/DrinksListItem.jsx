@@ -15,7 +15,7 @@ import {
   deleteFavoriteDrink,
 } from '../../redux/drinks/operations';
 import DummyDrinkThumb from 'src/images/dummyDrinkThumb.png';
-import sprite from './svg/sprite.svg';
+import sprite from '../../images/sprite.svg';
 
 export const DrinksListItem = ({ drink }) => {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ export const DrinksListItem = ({ drink }) => {
         <SeeMoreButton to={`/drink/${drink._id}`}>See more</SeeMoreButton>
         <DeleteButton type="button" onClick={handleDelete}>
           <svg width="24px" height="24px" stroke="#F3F3F3">
-            <use href={`${sprite}#icon-trash`} />
+            <use href={`${sprite}#trash`} />
           </svg>
         </DeleteButton>
       </BtnWrapper>

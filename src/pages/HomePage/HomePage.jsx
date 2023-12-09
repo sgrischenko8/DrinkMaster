@@ -1,5 +1,5 @@
-import { AddDrink } from '../../components/HomePageComponents/AddDrink';
-import { PreviewDrinks } from '../../components/HomePageComponents/PreviewDrinks';
+import { AddDrink } from 'src/components/HomePageComponents/AddDrink';
+import { PreviewDrinks } from 'src/components/HomePageComponents/PreviewDrinks';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -9,7 +9,7 @@ import {
 } from 'src/redux/drinks/selectors.js';
 
 import { fetchNewDrinks } from 'src/redux/drinks/operations.js';
-import Loader from 'src/components/Loader/Loader';
+import { Loader } from 'src/components/Loader/Loader';
 
 const HomePage = () => {
   const dispatch = useDispatch();

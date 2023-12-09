@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ReactComponent as CocktailIconSvg } from 'src/images/cocktailLoader.svg';
-// import { colors } from '../../colors';
 
 export const LoaderWrap = styled.div`
   position: absolute;
@@ -15,12 +14,14 @@ export const CocktailIcon = styled(CocktailIconSvg)`
   transform: translate(-50%, -50%) scale(1);
   width: 100px;
   height: 100px;
-  [stroke='#f3f3f3'] {
+
+  #glass {
     stroke-dasharray: 400;
     stroke-dashoffset: 1000;
     animation: dash 4s linear alternate infinite;
   }
-  [stroke='transparent'] {
+
+  #liquid {
     animation-name: fill;
     animation-duration: 4s;
     animation-direction: normal;

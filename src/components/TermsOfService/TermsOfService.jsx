@@ -1,17 +1,13 @@
 import {
-  PrivacyWrap,CloseBtn,
   MainTitle,
   Title,
   SubTitle,
   PrivacyText,
 } from '../Privacy/Privacy.styled';
 
-export const TermsOfService = ({onClose}) => {
+export const TermsOfService = () => {
   return (
-        
-    <PrivacyWrap><CloseBtn onClick={() => onClose(null)}>
-          +
-        </CloseBtn>
+    <>
       <MainTitle>Terms of Service</MainTitle>
 
       <Title>
@@ -92,6 +88,6 @@ export const TermsOfService = ({onClose}) => {
         you do not agree to these terms, you must cease using the App
         immediately.
       </PrivacyText>
-    </PrivacyWrap> 
+    </>
   );
 };

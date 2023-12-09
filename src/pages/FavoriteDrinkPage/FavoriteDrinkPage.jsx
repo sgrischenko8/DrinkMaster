@@ -1,19 +1,20 @@
-import { DrinksList } from '../../components/DrinksList/DrinksList';
+import { DrinksList } from 'src/components/DrinksList/DrinksList';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchFavoriteDrinks } from '../../redux/drinks/operations';
+import { fetchFavoriteDrinks } from 'src/redux/drinks/operations';
 import {
   selectErrorFavorite,
   selectIsLoadingFavorite,
   selectFavoriteDrinksLimit,
   selectFavoriteDrinksMax,
   selectPage,
-} from '../../redux/drinks/selectors';
+} from 'src/redux/drinks/selectors';
 import PageTitle from 'src/components/PageTitle/PageTitle';
-import Loader from 'src/components/Loader/Loader';
-import NotFound from '../../components/NotFound/NotFound';
-import { selectTheme } from '../../redux/theme/themeSlice';
+import { Loader } from 'src/components/Loader/Loader';
+import NotFound from 'src/components/NotFound/NotFound';
+import { selectTheme } from 'src/redux/theme/themeSlice';
 import Paginator from 'src/components/Paginator/Paginator';
+
 const FavoriteDrinkPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoadingFavorite);
@@ -25,6 +26,7 @@ const FavoriteDrinkPage = () => {
   useEffect(() => {
     dispatch(fetchFavoriteDrinks(page));
   }, [page]);
+
   return (
     <>
       <PageTitle title="Favorites" theme={theme} />

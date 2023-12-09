@@ -1,4 +1,4 @@
-import Logo from '../Logo/Logo';
+import { Logo } from '../Logo/Logo';
 import FooterNav from '../FooterNav/FooterNav';
 import FollowUs from '../FollowUs/FollowUs';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ onClose, content }) => {
+export const Modal = ({ onClose, children }) => {
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.code === 'Escape') {
@@ -30,8 +30,8 @@ export const Modal = ({ onClose, content }) => {
   };
 
   return createPortal(
-    <div className={css.overlay} onMouseDown={handleBackdropClick}>      
-        {content}      
+    <div className={css.overlay} onMouseDown={handleBackdropClick}>
+      {children}
     </div>,
     modalRoot,
   );

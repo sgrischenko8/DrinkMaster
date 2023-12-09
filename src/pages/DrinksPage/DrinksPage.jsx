@@ -19,7 +19,7 @@ import {
 } from '../../redux/drinks/selectors';
 import Paginator from 'src/components/Paginator/Paginator';
 
-import Loader from 'src/components/Loader/Loader';
+import { Loader } from 'src/components/Loader/Loader';
 import PageTitle from 'src/components/PageTitle/PageTitle';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 

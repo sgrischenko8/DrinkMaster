@@ -1,6 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-
+const persistConfig = {
+  key: 'theme',
+  storage,
+};
 
 export const themeSlice = createSlice({
   name: 'theme',
@@ -12,10 +17,10 @@ export const themeSlice = createSlice({
   },
 });
 
-
-
-export const { toggleTheme }  = themeSlice.actions;
+export const { toggleTheme } = themeSlice.actions;
 export const selectTheme = (state) => state.theme.color;
 
-
-export const themeReducer = themeSlice.reducer;
+export const persistedThemeReducer = persistReducer(
+  persistConfig,
+  themeSlice.reducer,
+);

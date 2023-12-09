@@ -26,6 +26,8 @@ import {
 } from './DrinksSearch.styled';
 import { selectTheme } from 'src/redux/theme/themeSlice';
 
+import sprite from '../../images/sprite.svg';
+
 const DrinksSearch = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const categories = useSelector(selectCategories);
@@ -111,7 +113,9 @@ const DrinksSearch = () => {
           />
 
           <StyledSearchButton type="submit">
-            <StyledSearchIcon theme={theme} />
+            <StyledSearchIcon theme={theme}>
+              <use href={`${sprite}#search`} />
+            </StyledSearchIcon>
           </StyledSearchButton>
         </StyledLabel>
         <StyledSelect

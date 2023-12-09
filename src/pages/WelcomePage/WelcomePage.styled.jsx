@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ReactComponent as CocktailIcon } from 'src/images/cocktail.svg';
 import { colors } from 'src/colors';
 
 export const FlexContainer = styled.div`
@@ -47,7 +46,7 @@ const rotate = keyframes`
   }
 `;
 
-export const StyledCocktailIcon = styled(CocktailIcon)`
+export const StyledCocktailIcon = styled.svg`
   position: absolute;
   width: 32px;
   height: 32px;

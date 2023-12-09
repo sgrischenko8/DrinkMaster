@@ -7,45 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
-}
-
-.modal {
-  position: relative;
-  width: 75%;
-  height: 96%;
-  border-radius: 24px;
-  background-color: black;
-  border: 1px solid #ffffff50;
-  overflow-y: scroll;
-}
-
-.modal_close_btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 24px;
-  height: 24px;
-  font-weight: 300;
-  font-size: 38px;
-  line-height: 1;
-  color: #f3f3f3;
-  background-color: inherit;
-  border: none;
-  transform: rotate(45deg);
-}
-.modal_close_btn:hover,
-.modal_close_btn:focus {
-  scale: 1.2;
-  outline: none;
-}
-.modal_close_btn:active {
-  scale: 1;
-  outline: none;
 }

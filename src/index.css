@@ -97,6 +97,12 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+}
+
 ul {
   list-style: none;
   padding: 0;

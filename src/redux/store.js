@@ -24,7 +24,7 @@ import {
 } from './drinks/drinksSlice';
 import { persistedFormReducer } from './drinks/formSlice';
 
-import { themeReducer } from './theme/themeSlice';
+import { persistedThemeReducer } from './theme/themeSlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -44,7 +44,7 @@ export const store = configureStore({
     glass: glassReducer,
     ingredient: ingredientReducer,
     drinkDetails: drinkByIdReducer,
-    theme: themeReducer,
+    theme: persistedThemeReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
