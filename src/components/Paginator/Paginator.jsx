@@ -49,6 +49,7 @@ const Paginator = ({ limit, totalItems }) => {
       height: '55px',
       marginLeft: 'auto',
       marginRight: 'auto',
+      marginTop: screenSize ? '80px' : '40px',
     },
 
     pagination: {

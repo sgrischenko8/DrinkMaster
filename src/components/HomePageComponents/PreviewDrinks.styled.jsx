@@ -11,18 +11,10 @@ export const List = styled.ul`
 `;
 
 export const CategoryName = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 32px;
-  margin-bottom: 0;
   ${({ theme }) =>
     theme === 'dark'
       ? `color: ${colors.light};`
       : `color: ${colors.secondaryDark};`}
-  @media only screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 44px;
-  }
 `;
 
 export const ListCard = styled.li`
@@ -86,9 +78,7 @@ export const TitleWrapper = styled.div`
 
 export const DrinkTitle = styled.h3`
   font-size: 16px;
-  font-weight: 500;
   line-height: 18px;
-  margin-bottom: 0;
   ${({ theme }) =>
     theme === 'dark'
       ? `color: ${colors.light};`

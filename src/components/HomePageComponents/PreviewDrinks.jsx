@@ -40,7 +40,7 @@ export const PreviewDrinks = () => {
   }, [screenSizeMobile, screenSizeTablet, initialData]);
 
   return (
-    <>
+    <section>
       <List>
         {data.map((categoryData) => (
           <ListCard key={categoryData.category}>
@@ -72,6 +72,6 @@ export const PreviewDrinks = () => {
         ))}
       </List>
       <StyledLinkToDrinksPage to="/drinks">Other drinks</StyledLinkToDrinksPage>
-    </>
+    </section>
   );
 };

@@ -14,7 +14,9 @@ export default function WelcomePage() {
   return (
     <WelcomeBox>
       <FlexContainer>
-        <Title>Welcome to the app!!</Title>
+        <Title color={'#fafafa'} page={'welcome'}>
+          Welcome to the app!!
+        </Title>
         <StyledCocktailIcon>
           <use href={`${sprite}#cocktail`} />
         </StyledCocktailIcon>

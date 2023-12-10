@@ -9,7 +9,7 @@ import {
 import { selectTheme } from 'src/redux/theme/themeSlice';
 import { NotFound } from '../NotFound/NotFound';
 
-export const DrinksList = () => {
+export const DrinksList = ({ drinks }) => {
   const listOfOwnDrinks = useSelector(selectOwnDrinks);
   const listOfFavoriteDrinks = useSelector(selectFavoriteDrinks);
 
@@ -23,7 +23,7 @@ export const DrinksList = () => {
 
   return listOfDrinks.length > 0 ? (
     <List theme={theme}>
-      {listOfDrinks.map((drink) => (
+      {drinks.map((drink) => (
         <DrinksListItem key={drink._id} drink={drink} />
       ))}
     </List>

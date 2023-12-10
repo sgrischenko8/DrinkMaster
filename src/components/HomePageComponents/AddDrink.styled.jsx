@@ -22,7 +22,7 @@ const slideLeft = keyframes`
   }
 `;
 
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled.section`
   margin-bottom: 112px;
   @media only screen and (min-width: 768px) {
     margin-bottom: 123px;

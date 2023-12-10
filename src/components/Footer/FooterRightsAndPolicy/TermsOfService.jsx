@@ -1,10 +1,17 @@
-import { MainTitle, Title, SubTitle, PrivacyText } from './Privacy.styled';
+import { Title, SubTitle, PrivacyText } from './Privacy.styled';
+import PageTitle from 'src/components/PageTitle/PageTitle';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { selectTheme } from 'src/redux/theme/themeSlice';
 
 export const TermsOfService = () => {
+  const theme = useSelector(selectTheme);
   return (
     <>
-      <MainTitle>Terms of Service</MainTitle>
-
+      <PageTitle
+        theme={theme}
+        title={'Terms of Service'}
+        marginMobile={'40px'}
+      />
       <Title>
         This &quot;User Agreement&quot; (the &quot;Agreement&quot;) sets forth
         the terms and conditions governing the use of the Drink Master

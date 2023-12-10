@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { fetchOwnDrinks } from 'src/redux/drinks/operations';
 import { DrinksList } from 'src/components/DrinksList/DrinksList';
 import {
+  selectOwnDrinks,
   selectErrorOwn,
   selectIsLoadingOwn,
   selectOwnDrinksLimit,
@@ -24,17 +25,26 @@ const MyDrinksPage = () => {
   const max = useSelector(selectOwnDrinksMax);
   const limit = useSelector(selectOwnDrinksLimit);
   const page = useSelector(selectPage);
+  const listOfOwnDrinks = useSelector(selectOwnDrinks);
   useEffect(() => {
     dispatch(fetchOwnDrinks(page));
   }, [page]);
 
   return (
     <>
-      <PageTitle title="My drinks" theme={theme} />
+      <PageTitle
+        title="My drinks"
+        theme={theme}
+        marginMobile={'40px'}
+        marginTablet={'60px'}
+        marginDesktop={'60px'}
+      />
       {isLoading && !error && <Loader />}
       {error && <NotFound message={'Something went wrong'} />}
-      <DrinksList />
-      <Paginator limit={limit} totalItems={max} />
+      <DrinksList drinks={listOfOwnDrinks} />
+      {listOfOwnDrinks.length > 0 ? (
+        <Paginator limit={limit} totalItems={max} />
+      ) : null}
     </>
   );
 };

@@ -33,7 +33,10 @@ export const Navigation = ({ isOpen, setIsMenuOpen, location, theme }) => {
                 to={el[1]}
                 theme={theme}
                 location={location}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  document.body.style.overflow = 'auto';
+                  setIsMenuOpen(false);
+                }}
               >
                 {el[0]}
               </StyledNavigationLink>

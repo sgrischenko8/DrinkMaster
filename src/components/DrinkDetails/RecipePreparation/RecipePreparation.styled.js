@@ -4,18 +4,10 @@ import { colors } from '../../../colors';
 export const Title = styled.h2`
   margin-top: 80px;
   margin-bottom: 40px;
-  font-size: 28px;
-  line-height: calc(32 / 28);
-  letter-spacing: 0;
   ${({ theme }) =>
     theme === 'dark'
       ? ` color: ${colors.light};`
       : `color: ${colors.primaryDark};`}
-
-  @media only screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: calc(44 / 40);
-  }
 
   @media (min-width: 1440px) {
     margin-top: 100px;

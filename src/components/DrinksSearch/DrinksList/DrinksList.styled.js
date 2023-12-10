@@ -45,9 +45,9 @@ export const DescriptionWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const DrinkTitle = styled.p`
+export const DrinkTitle = styled.h2`
   margin: 0;
-  /* color: ${colors.light}; //#f3f3f3 */
+  width: 75%;
   color: ${({ theme }) =>
     theme === 'dark' ? colors.light : colors.primaryDark};
   font-size: 16px;
@@ -60,6 +60,8 @@ export const DrinkTitle = styled.p`
 `;
 
 export const DescriptionLink = styled(Link)`
+  padding: 0;
+
   color: ${({ theme }) =>
     theme === 'dark' ? 'rgba(243, 243, 243, 0.5)' : 'rgba(10, 10, 17, 0.5)'};
 

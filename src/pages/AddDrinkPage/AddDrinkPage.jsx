@@ -16,7 +16,7 @@ const AddDrinkPage = () => {
         marginMobile={'40px'}
         marginTablet={'60px'}
         marginDesktop={'60px'}
-      ></PageTitle>
+      />
       <FlexBox>
         <AddDrinkForm theme={theme} />
         <div>

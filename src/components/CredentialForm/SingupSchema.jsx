@@ -1,5 +1,5 @@
 import * as yup from 'yup';
-import { objSigninSchema } from '../SinginForm/SinginSchema';
+import { objSigninSchema } from './SinginSchema';
 
 const objSignupSchema = {
   ...objSigninSchema,

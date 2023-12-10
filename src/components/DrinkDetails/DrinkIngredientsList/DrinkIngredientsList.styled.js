@@ -6,7 +6,7 @@ export const AllTitleIngredients = styled.h2`
     theme === 'dark'
       ? ` color: ${colors.halfLight};`
       : `color: ${colors.halfPrimaryDark};`}
-  font-family: Manrope;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
@@ -26,16 +26,12 @@ export const ListIngredient = styled.ul`
   flex-wrap: wrap;
   column-gap: 21px;
   align-items: center;
-
-  @media (min-width: 1440px) {
-    column-gap: 35px;
-  }
-`;
-
-export const ItemIngredient = styled.li`
-  margin-bottom: 28px;
+  row-gap: 20px;
   @media (min-width: 768px) {
-    margin-bottom: 40px;
+    row-gap: 22px;
+    @media (min-width: 1440px) {
+      column-gap: 35px;
+    }
   }
 `;
 
@@ -50,25 +46,29 @@ export const ImageIngredient = styled.img`
 
 export const DescriptionIngredient = styled.div`
   margin-top: 14px;
+  width: 157px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  font-weight: 500;
+  @media (min-width: 768px) {
+    width: 220px;
+  }
 `;
 
 export const TitleIngredient = styled.p`
-  margin: 0;
   ${({ theme }) =>
     theme === 'dark'
       ? ` color: ${colors.light};`
       : `color: ${colors.primaryDark};`}
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.13;
 
   @media (min-width: 768px) {
     font-size: 18px;
     line-height: 1.34;
   }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const MeasureIngredien = styled.p`
@@ -76,13 +76,12 @@ export const MeasureIngredien = styled.p`
     theme === 'dark'
       ? ` color: ${colors.halfLight};`
       : `color: ${colors.halfPrimaryDark};`}
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.29;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 1.13;
   }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

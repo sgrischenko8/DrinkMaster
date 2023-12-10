@@ -160,6 +160,7 @@ export const buttonStyled = {
 
   textTransform: 'capitalize',
   border: '1px solid rgba(243, 243, 243, 0.2)',
+  borderRadius: '42px',
 
   background: '#F3F3F3',
   color: '#161F37',

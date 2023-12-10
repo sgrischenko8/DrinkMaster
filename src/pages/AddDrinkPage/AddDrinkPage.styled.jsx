@@ -23,7 +23,7 @@ export const Undertitle = styled.h3`
   @media only screen and (min-width: 768px) {
     margin-bottom: 24px;
   }
-  font-weight: 500;
+
   font-size: 18px;
   line-height: calc(24 / 18);
   letter-spacing: 0;

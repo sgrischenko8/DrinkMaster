@@ -3,21 +3,22 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   border-top: 1px solid rgba(243, 243, 243, 0.2);
   width: 100%;
+  background-color: #0a0a11;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
   padding: 40px 20px 10px;
-  width: 375px;
+  width: 335px;
 
   @media screen and (min-width: 768px) {
     padding: 80px 32px 16px;
-    width: 768px;
+    width: 704px;
   }
 
   @media screen and (min-width: 1440px) {
     padding: 80px 100px 16px;
-    width: 1440px;
+    width: 1240px;
   }
 `;
 

@@ -9,7 +9,8 @@ import {
 export const WelcomeBox = ({ children }) => {
   return (
     <WelcomeWrapper>
-      {children}
+      <div>{children}</div>
+
       <HeroImg />
       <BubbleWelcome1 />
       <BubbleWelcome2 />

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { getColors } from 'src/utils/getColors';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   @media only screen and (min-width: 768px) {
     max-width: 704px;
     @media only screen and (min-width: 1440px) {

@@ -1,9 +1,13 @@
-import { MainTitle, Title, SubTitle, PrivacyText } from './Privacy.styled';
+import { Title, SubTitle, PrivacyText } from './Privacy.styled';
+import PageTitle from 'src/components/PageTitle/PageTitle';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { selectTheme } from 'src/redux/theme/themeSlice';
 
 export const Privacy = () => {
+  const theme = useSelector(selectTheme);
   return (
     <>
-      <MainTitle>Privacy Policy</MainTitle>
+      <PageTitle theme={theme} title={'Privacy Policy'} marginMobile={'40px'} />
 
       <Title>
         Your privacy is important to us. This section outlines how we collect,

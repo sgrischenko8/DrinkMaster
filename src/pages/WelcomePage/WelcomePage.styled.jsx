@@ -11,7 +11,8 @@ export const FlexContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: ${colors.light};
+  color: ${({ $color }) => $color};
+  margin-bottom: ${({ page }) => (page ? '14px' : '28px')};
   font-size: 28px;
   line-height: calc(32 / 28);
   letter-spacing: -0.56px;

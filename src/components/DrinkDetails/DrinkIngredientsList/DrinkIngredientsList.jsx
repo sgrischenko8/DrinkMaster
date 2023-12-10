@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import {
   ImageIngredient,
-  ItemIngredient,
   ListIngredient,
   AllTitleIngredients,
   DescriptionIngredient,
@@ -21,7 +20,7 @@ const DrinkIngredientsList = ({ drinkDetails }) => {
       <ListIngredient>
         {ingredients?.map(
           ({ ingredientId, title, measure, ingredientThumb }) => (
-            <ItemIngredient key={ingredientId}>
+            <li key={ingredientId}>
               <ImageIngredient
                 src={ingredientThumb}
                 alt={title}
@@ -34,7 +33,7 @@ const DrinkIngredientsList = ({ drinkDetails }) => {
                 <TitleIngredient theme={theme}>{title}</TitleIngredient>
                 <MeasureIngredien theme={theme}>{measure}</MeasureIngredien>
               </DescriptionIngredient>
-            </ItemIngredient>
+            </li>
           ),
         )}
       </ListIngredient>

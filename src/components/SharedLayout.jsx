@@ -15,9 +15,11 @@ const SharedLayout = () => {
       <MainAppContainer>
         <Header />
         <main>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
+          <div id="limiter">
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+          </div>
         </main>
 
         <Footer />

@@ -5,23 +5,19 @@ import { colors } from '../../colors';
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   ${({ theme }) =>
     theme === 'dark'
       ? ` color: ${colors.light};`
       : `color: ${colors.primaryDark};`}
-  margin: 40px 0 51px;
+
   @media only screen and (min-width: 768px) {
     row-gap: 80px;
     column-gap: 20px;
-    margin: 60px 0 80px;
   }
 `;
 export const DrinksItem = styled.li`
-  width: 335px;
-  height: 676px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -29,7 +25,7 @@ export const DrinksItem = styled.li`
     width: 342px;
     gap: 24px;
   }
-  @media only screen and (min-width: 1140px) {
+  @media only screen and (min-width: 1440px) {
     width: 400px;
   }
 `;
@@ -49,19 +45,29 @@ export const DrinkTitle = styled.h2`
   }
 `;
 export const DrinkDesc = styled.p`
-  font-size: 14px;
-  height: 110px;
+  height: 75px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   @media only screen and (min-width: 768px) {
+    height: 110px;
     font-size: 16px;
+    line-height: calc(22 / 16);
+    -webkit-line-clamp: 5;
+  }
+  @media only screen and (min-width: 1440px) {
+    padding-top: 4px;
+    height: 96px;
+    -webkit-line-clamp: 4;
   }
 `;
 export const DrinkAlc = styled.span`
-  font-size: 14px;
   color: ${colors.disabled};
   @media only screen and (min-width: 768px) {
     font-size: 16px;
+    line-height: calc(18 / 16);
   }
 `;
 export const TitleWrapper = styled.div`
