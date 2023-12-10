@@ -1,11 +1,12 @@
-import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}from"./index-a8fd8fe1.js";const h=e.div`
+import{k as e,o as i,p as t,L as r,j as o,W as s,H as n,B as c,q as l,t as p}from"./index-5cdb660f.js";const g=e.div`
   position: relative;
   margin-bottom: 14px;
   display: flex;
   gap: 2px;
   align-items: baseline;
-`,g=e.h1`
-  color: ${t.light};
+`,h=e.h1`
+  color: ${({$color:a})=>a};
+  margin-bottom: ${({page:a})=>a?"14px":"28px"};
   font-size: 28px;
   line-height: calc(32 / 28);
   letter-spacing: -0.56px;
@@ -15,7 +16,7 @@ import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}fro
     line-height: calc(44 / 40);
     letter-spacing: -0.8px;
   }
-`,d=i`
+`,x=i`
  0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -45,7 +46,7 @@ import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}fro
   fill: ${t.disabled};
   stroke: ${t.light};
 
-  animation: ${d} 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: ${x} 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
   @media screen and (min-width: 768px) {
     width: 45px;
@@ -70,7 +71,7 @@ import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}fro
 `,k=e.div`
   display: flex;
   gap: 14px;
-`,x=e(r)`
+`,d=e(r)`
   color: ${t.secondaryDark};
   background: ${t.light};
 
@@ -82,7 +83,7 @@ import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}fro
   @media screen and (min-width: 768px) {
     color: #161f37;
   }
-`,u=e(x)`
+`,u=e(d)`
   color: ${t.light};
   border: 1px solid rgba(243, 243, 243, 0.2);
   background: transparent;
@@ -91,4 +92,4 @@ import{n as e,o as t,p as i,L as r,j as o,W as s,H as n,B as c,q as l,t as p}fro
     color: ${t.secondaryDark};
     background: ${t.light};
   }
-`,w=({children:a})=>o.jsxs(s,{children:[a,o.jsx(n,{}),o.jsx(c,{}),o.jsx(l,{}),o.jsx(p,{})]});export{x as A,k as B,h as F,b as S,g as T,w as W,f as a,u as b};
+`,w=({children:a})=>o.jsxs(s,{children:[o.jsx("div",{children:a}),o.jsx(n,{}),o.jsx(c,{}),o.jsx(l,{}),o.jsx(p,{})]});export{d as A,k as B,g as F,b as S,h as T,w as W,f as a,u as b};
