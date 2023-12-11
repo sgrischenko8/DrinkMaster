@@ -35,12 +35,11 @@ export const TitleWrapper = styled.section`
 `;
 
 export const AddDrinkWrapper = styled.div`
+margin-bottom: 47px;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  max-width: 335px;
-
-  margin-bottom: 47px;
+  
   @media only screen and (min-width: 768px) {
     max-width: 619px;
     margin-bottom: 54px;
@@ -61,14 +60,12 @@ export const DesktopTitle = styled.div`
 
 export const AppDescription = styled.p`
 height: 60px;
-font-size: 14px;
-font-weight: 400px;
-line-height: 20px;
+line-height: calc(20 /14);
 margin-bottom: 32px;
-${({ theme }) =>
+color: ${({ theme }) =>
   theme === 'dark'
-    ? `color: ${colors.light};`
-    : `color: ${colors.secondaryDark};`}
+    ? `${colors.light}`
+    : `${colors.secondaryDark}`};
 @media only screen and (min-width: 768px) {
 font-size: 18px;
 line-height: 24px;
@@ -87,12 +84,8 @@ export const StyledLink = styled(Link)`
   transition: 250ms ease;
   ${({ theme }) =>
     theme === 'dark'
-      ? `color: ${colors.secondaryDark};`
-      : `color: ${colors.light};`};
-  ${({ theme }) =>
-    theme === 'dark'
-      ? `background-color: ${colors.light};`
-      : `background-color: ${colors.secondaryDark};`}
+      ? `color: ${colors.secondaryDark};background-color: ${colors.light};`
+      : `color: ${colors.light};background-color: ${colors.secondaryDark};`};
 
   @media only screen and (min-width: 768px) {
     width: 169px;
@@ -109,12 +102,8 @@ export const StyledLink = styled(Link)`
   &:hover {
     ${({ theme }) =>
       theme === 'dark'
-        ? `color: ${colors.light};`
-        : `color: ${colors.secondaryDark};`}
-    ${({ theme }) =>
-      theme === 'dark'
-        ? `background-color: ${colors.secondaryDark};`
-        : `background-color: ${colors.light};`}
+        ? `color: ${colors.light};background-color: ${colors.secondaryDark};`
+        : `color: ${colors.secondaryDark};background-color: ${colors.light};`}
   }
 `;
 
