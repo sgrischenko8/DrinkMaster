@@ -11,10 +11,10 @@ export const List = styled.ul`
 `;
 
 export const CategoryName = styled.h2`
-  ${({ theme }) =>
+ color: ${({ theme }) =>
     theme === 'dark'
-      ? `color: ${colors.light};`
-      : `color: ${colors.secondaryDark};`}
+      ? `${colors.light}`
+      : `${colors.secondaryDark}`}
 `;
 
 export const ListCard = styled.li`
@@ -39,7 +39,6 @@ export const DrinksItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  max-width: 335px;
 
   @media only screen and (min-width: 768px) {
     max-width: 342px;
@@ -78,14 +77,14 @@ export const TitleWrapper = styled.div`
 
 export const DrinkTitle = styled.h3`
   font-size: 16px;
-  line-height: 18px;
-  ${({ theme }) =>
+  line-height: calc(18 /16);
+  color: ${({ theme }) =>
     theme === 'dark'
-      ? `color: ${colors.light};`
-      : `color: ${colors.secondaryDark};`}
+      ? `${colors.light}`
+      : `${colors.secondaryDark}`};
   @media only screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 24px;
+    line-height: calc (24 /18);
   }
 `;
 
@@ -93,16 +92,16 @@ export const StyledLinkToDrinkPage = styled(Link)`
   padding: 0;
   font-weight: 500;
   transition: 250ms ease;
-  ${({ theme }) =>
+  color: ${({ theme }) =>
     theme === 'dark'
-      ? `color: rgba(243, 243, 243, 0.5);`
-      : `color: rgba(10, 10, 17, 0.50);`}
+      ? `#f3f3f350`
+      : `rgba(10, 10, 17, 0.50)`};
 
   &:hover {
-    ${({ theme }) =>
+    color: ${({ theme }) =>
       theme === 'dark'
-        ? `color: ${colors.light};`
-        : `color: ${colors.secondaryDark};`}
+        ? `${colors.light}`
+        : `${colors.secondaryDark}`}
   }
 `;
 
@@ -114,13 +113,9 @@ export const StyledLinkToDrinksPage = styled(Link)`
   transition: 250ms ease;
   ${({ theme }) =>
     theme === 'dark'
-      ? `color: ${colors.secondaryDark};`
-      : `color: ${colors.light};`};
-  ${({ theme }) =>
-    theme === 'dark'
-      ? `background-color: ${colors.light};`
-      : `background-color: ${colors.secondaryDark};`}
-
+      ? `color: ${colors.secondaryDark};background-color: ${colors.light};`
+      : `color: ${colors.light};background-color: ${colors.secondaryDark};`};
+  
   @media only screen and (min-width: 768px) {
     width: 183px;
   }
@@ -132,11 +127,7 @@ export const StyledLinkToDrinksPage = styled(Link)`
   &:hover {
     ${({ theme }) =>
       theme === 'dark'
-        ? `color: ${colors.light};`
-        : `color: ${colors.secondaryDark};`}
-    ${({ theme }) =>
-      theme === 'dark'
-        ? `background-color: ${colors.secondaryDark};`
-        : `background-color: ${colors.light};`}
+        ? `color: ${colors.light};background-color: ${colors.secondaryDark};`
+        : `color: ${colors.secondaryDark};background-color: ${colors.light};`}  
   }
 `;
