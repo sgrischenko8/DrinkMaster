@@ -1,4 +1,4 @@
-import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A as b,C as f,D as w,E as F,F as T,G as M,P as N,y as A}from"./index-64c0d537.js";import{c as j,d as O,e as _,f as I,g as R,h as W,i as q}from"./dummyDrinkThumb-73564026.js";import{N as B,P as G}from"./Paginator-07658884.js";import{S as H}from"./react-select.esm-215818ed.js";import{b as v}from"./useMediaQuery-dac15d51.js";import"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import"./ButtonBase-fe193dbd.js";import"./emotion-element-c39617d8.browser.esm-d4b1530c.js";import"./assertThisInitialized-4c0823fa.js";import"./emotion-styled.browser.esm-e75e12ce.js";const J=a.ul`
+import{k as a,p as t,L as E,v as s,w as k,j as r,r as g,u as j,z as y,s as Q,A as b,C as f,D as w,E as F,F as T,G as M,P as N,y as A}from"./index-e26426b5.js";import{c as $,d as O,e as _,f as I,g as R,h as W,i as q}from"./dummyDrinkThumb-73564026.js";import{N as B,P as G}from"./Paginator-ee0078c7.js";import{S as H}from"./react-select.esm-0ed5bbdf.js";import{b as v}from"./useMediaQuery-f0311eef.js";import"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import"./ButtonBase-4faae9a8.js";import"./emotion-element-c39617d8.browser.esm-a29e457c.js";import"./assertThisInitialized-b9f6ad04.js";import"./emotion-styled.browser.esm-18c6b8d0.js";const J=a.ul`
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
     /* color: ${t.light}; //#f3f3f3; */
     color: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
   }
-`,Z=()=>{const{drinks:e}=s(j),o=s(k);return(e==null?void 0:e.length)!==0?r.jsx(J,{children:e==null?void 0:e.map(c=>r.jsxs(K,{children:[r.jsx(U,{src:c.drinkThumb,alt:c.drink,loading:"lazy",onError:d=>{d.currentTarget.src=O}}),r.jsxs(V,{children:[r.jsx(X,{theme:o,children:c.drink}),r.jsx(Y,{theme:o,to:`/drink/${c._id}`,children:"See more"})]})]},c._id))}):r.jsx(B,{message:"No cocktails found for your request"})},ee=a.div`
+`,Z=()=>{const{drinks:e}=s($),i=s(k);return(e==null?void 0:e.length)!==0?r.jsx(J,{children:e==null?void 0:e.map(c=>r.jsxs(K,{children:[r.jsx(U,{src:c.drinkThumb,alt:c.drink,loading:"lazy",onError:d=>{d.currentTarget.src=O}}),r.jsxs(V,{children:[r.jsx(X,{theme:i,children:c.drink}),r.jsx(Y,{theme:i,to:`/drink/${c._id}`,children:"See more"})]})]},c._id))}):r.jsx(B,{message:"No cocktails found for your request"})},ee=a.div`
   margin-top: 40px;
   @media (min-width: 768px) {
     margin-top: 60px;
@@ -79,14 +79,13 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
 `,re=a.label`
   position: relative;
   display: inline-block;
-`,oe=a.input`
+`,ie=a.input`
   width: 335px;
   height: 54px;
   padding: 18px 24px 18px 24px;
   background-color: transparent;
   border-radius: 200px;
-  border: ${({theme:e})=>e==="dark"?"1px solid rgba(243, 243, 243, 0.2)":"1px solid rgba(10, 10, 17, 0.20)"};
-  /* color: ${t.light}; //#f3f3f3 */
+  border: ${({theme:e})=>e==="dark"?"1px solid #f3f3f320":"1px solid rgba(10, 10, 17, 0.20)"};
   color: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
   font-family: Manrope;
   font-size: 14px;
@@ -98,14 +97,12 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
   transition: border-color 250ms ease;
 
   &::placeholder {
-    /* color: ${t.light}; //#f3f3f3 */
     color: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
     opacity: 1;
   }
 
   &:hover,
   &:focus {
-    /* border-color: rgba(243, 243, 243, 0.5); */
     border-color: ${({theme:e})=>e==="dark"?"rgba(243, 243, 243, 0.5)":"rgba(10, 10, 17, 0.50)"};
   }
 
@@ -117,7 +114,7 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
     font-size: 17px;
     line-height: 1.56;
   }
-`,ie=a.button`
+`,oe=a.button`
   display: none;
 
   @media (min-width: 768px) {
@@ -129,6 +126,8 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
   }
 `,ne=a.svg`
   display: block;
+  width:20px;
+  height:20px;
   stroke: ${({theme:e})=>e==="dark"?t.light:t.primaryDark};
 `,S=a(H)`
   .react-select__control {
@@ -251,4 +250,4 @@ import{k as a,p as t,L as E,v as s,w as k,j as r,r as h,u as $,z as y,s as Q,A a
       cursor: pointer;
     }
   }
-`,D={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.light:"rgba(243, 243, 243, 0.4)"})},ae={dropdownIndicator:(e,o)=>({...e,transform:o.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,o)=>({...e,color:o.isSelected||o.isFocused?t.primaryDark:"rgba(10, 10, 17, 0.4)"})},se=()=>{const[e,o]=h.useState(""),c=s(_),d=s(I),l=s(k),x=c.length!==0?["All categories",...c]:[],m=d.length!==0?[{title:"All ingredients"},...d]:[],i=$(),u=v("(max-width:767px)");h.useEffect(()=>{u&&i(y(e))},[i,u,e]);const p=(n,g="")=>{switch(n){case"searchQuery":o(g),i(f(1));break;case"category":if(g==="All categories"){i(w(""));return}i(w(g)),i(f(1));break;case"ingredient":if(g==="All ingredients"){i(b(""));return}i(b(g)),i(f(1));break}},C=n=>{p("searchQuery",n.target.value.trim())},z=n=>{p("category",n.value)},L=n=>{p("ingredient",n.value)},P=n=>{n.preventDefault(),i(y(e))};return r.jsx(ee,{children:r.jsxs(te,{onSubmit:P,children:[r.jsxs(re,{children:[r.jsx(oe,{type:"text",placeholder:"Enter the text",onChange:C,theme:l}),r.jsx(ie,{type:"submit",children:r.jsx(ne,{theme:l,children:r.jsx("use",{href:`${Q}#search`})})})]}),r.jsx(S,{name:"category",placeholder:"All categories",classNamePrefix:"react-select",styles:l==="dark"?D:ae,theme:l,noOptionsMessage:()=>"No categories",options:x.map(n=>({label:n,value:n})),onChange:z}),r.jsx(S,{name:"ingredient",styles:D,theme:l,placeholder:"Ingredients",classNamePrefix:"react-select",noOptionsMessage:()=>"No ingredients",options:m.map(n=>({label:n.title,value:n.title})),onChange:L})]})})},ke=()=>{const e=s(_),o=s(I),c=s(j),d=s(R),l=s(W),x=s(q),m=s(k),i=$(),p=v("(min-width:769px)")?9:10;return h.useEffect(()=>{e.length||i(F())},[e,i]),h.useEffect(()=>{o.length||i(T())},[i,o]),h.useEffect(()=>{i(M({searchQuery:l,page:d,limit:p}))},[i,p,d,l]),r.jsxs(r.Fragment,{children:[r.jsx(N,{title:"Drinks",theme:m}),r.jsx(se,{}),x?r.jsx(A,{}):r.jsxs(r.Fragment,{children:[r.jsx(Z,{}),r.jsx(G,{totalItems:c.max_page,limit:p})]})]})};export{ke as default};
+`,D={dropdownIndicator:(e,i)=>({...e,transform:i.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,i)=>({...e,color:i.isSelected||i.isFocused?t.light:"rgba(243, 243, 243, 0.4)"})},ae={dropdownIndicator:(e,i)=>({...e,transform:i.selectProps.menuIsOpen?"rotate(180deg)":"rotate(0deg)"}),option:(e,i)=>({...e,color:i.isSelected||i.isFocused?t.primaryDark:"rgba(10, 10, 17, 0.4)"})},se=()=>{const[e,i]=g.useState(""),c=s(_),d=s(I),l=s(k),x=c.length!==0?["All categories",...c]:[],m=d.length!==0?[{title:"All ingredients"},...d]:[],o=j(),u=v("(max-width:767px)");g.useEffect(()=>{u&&o(y(e))},[o,u,e]);const p=(n,h="")=>{switch(n){case"searchQuery":i(h),o(f(1));break;case"category":if(h==="All categories"){o(w(""));return}o(w(h)),o(f(1));break;case"ingredient":if(h==="All ingredients"){o(b(""));return}o(b(h)),o(f(1));break}},C=n=>{p("searchQuery",n.target.value.trim())},z=n=>{p("category",n.value)},L=n=>{p("ingredient",n.value)},P=n=>{n.preventDefault(),o(y(e))};return r.jsx(ee,{children:r.jsxs(te,{onSubmit:P,children:[r.jsxs(re,{children:[r.jsx(ie,{type:"text",placeholder:"Enter the text",onChange:C,theme:l}),r.jsx(oe,{type:"submit",children:r.jsx(ne,{theme:l,children:r.jsx("use",{href:`${Q}#search`})})})]}),r.jsx(S,{name:"category",placeholder:"All categories",classNamePrefix:"react-select",styles:l==="dark"?D:ae,theme:l,noOptionsMessage:()=>"No categories",options:x.map(n=>({label:n,value:n})),onChange:z}),r.jsx(S,{name:"ingredient",styles:D,theme:l,placeholder:"Ingredients",classNamePrefix:"react-select",noOptionsMessage:()=>"No ingredients",options:m.map(n=>({label:n.title,value:n.title})),onChange:L})]})})},ke=()=>{const e=s(_),i=s(I),c=s($),d=s(R),l=s(W),x=s(q),m=s(k),o=j(),p=v("(min-width:769px)")?9:10;return g.useEffect(()=>{e.length||o(F())},[e,o]),g.useEffect(()=>{i.length||o(T())},[o,i]),g.useEffect(()=>{o(M({searchQuery:l,page:d,limit:p}))},[o,p,d,l]),r.jsxs(r.Fragment,{children:[r.jsx(N,{title:"Drinks",theme:m}),r.jsx(se,{}),x?r.jsx(A,{}):r.jsxs(r.Fragment,{children:[r.jsx(Z,{}),r.jsx(G,{totalItems:c.max_page,limit:p})]})]})};export{ke as default};
