@@ -1,4 +1,4 @@
-import{o as k,k as n,p as i,L as p,v as s,w as f,j as r,P as $,r as m,u as b,x as j,y as D}from"./index-2733eaea.js";import{e as x,a as h}from"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import{s as v,d as L,a as T,b as P}from"./dummyDrinkThumb-73564026.js";import{b as g}from"./useMediaQuery-72d24976.js";import"./emotion-element-c39617d8.browser.esm-cf5a357f.js";const S=k`
+import{o as k,k as n,p as i,L as p,v as s,w as f,j as r,P as $,r as m,u as b,x as j,y as D}from"./index-e79e5301.js";import{e as x,a as h}from"./img-blue-iced-tea-desktop@2x-9d8e6586.js";import{s as v,d as L,a as T,b as P}from"./dummyDrinkThumb-73564026.js";import{b as g}from"./useMediaQuery-772cb0f1.js";import"./emotion-element-c39617d8.browser.esm-fbe75123.js";const S=k`
   from {
     transform: translateY(-100%);
   }
@@ -23,12 +23,11 @@ import{o as k,k as n,p as i,L as p,v as s,w as f,j as r,P as $,r as m,u as b,x a
     margin-bottom: 160px;
   }
 `,C=n.div`
+margin-bottom: 47px;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  max-width: 335px;
-
-  margin-bottom: 47px;
+  
   @media only screen and (min-width: 768px) {
     max-width: 619px;
     margin-bottom: 54px;
@@ -45,11 +44,9 @@ import{o as k,k as n,p as i,L as p,v as s,w as f,j as r,P as $,r as m,u as b,x a
   animation: ${S} 1s forwards;
 `,M=n.p`
 height: 60px;
-font-size: 14px;
-font-weight: 400px;
-line-height: 20px;
+line-height: calc(20 /14);
 margin-bottom: 32px;
-${({theme:e})=>e==="dark"?`color: ${i.light};`:`color: ${i.secondaryDark};`}
+color: ${({theme:e})=>e==="dark"?`${i.light}`:`${i.secondaryDark}`};
 @media only screen and (min-width: 768px) {
 font-size: 18px;
 line-height: 24px;
@@ -64,8 +61,7 @@ margin-bottom: 40px;
   justify-content: center;
   align-items: center;
   transition: 250ms ease;
-  ${({theme:e})=>e==="dark"?`color: ${i.secondaryDark};`:`color: ${i.light};`};
-  ${({theme:e})=>e==="dark"?`background-color: ${i.light};`:`background-color: ${i.secondaryDark};`}
+  ${({theme:e})=>e==="dark"?`color: ${i.secondaryDark};background-color: ${i.light};`:`color: ${i.light};background-color: ${i.secondaryDark};`};
 
   @media only screen and (min-width: 768px) {
     width: 169px;
@@ -80,8 +76,7 @@ margin-bottom: 40px;
   }
 
   &:hover {
-    ${({theme:e})=>e==="dark"?`color: ${i.light};`:`color: ${i.secondaryDark};`}
-    ${({theme:e})=>e==="dark"?`background-color: ${i.secondaryDark};`:`background-color: ${i.light};`}
+    ${({theme:e})=>e==="dark"?`color: ${i.light};background-color: ${i.secondaryDark};`:`color: ${i.secondaryDark};background-color: ${i.light};`}
   }
 `,A=n.div`
   display: flex;
