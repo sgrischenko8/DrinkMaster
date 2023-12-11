@@ -1,4 +1,4 @@
-import{p as n,j as e,v as j,I as ai,r as I,J as A,h as Y,f as D,K as li,u as ti,M as si,O as di,Q as ci,S as pi,T as R,U as hi,V as xi,X as gi,Y as mi,k as v,N as fi,w as oi,Z as ui,P as yi,_ as bi}from"./index-5cdb660f.js";import{n as r}from"./emotion-styled.browser.esm-5b6eda62.js";import{j as ki,k as wi,l as q,d as ri,m as $i,n as ji,o as vi}from"./dummyDrinkThumb-73564026.js";import{S as Di}from"./react-select.esm-91c153f3.js";import"./emotion-element-c39617d8.browser.esm-622bba86.js";import"./assertThisInitialized-4b48ea18.js";const Ai=r.div`
+import{p as n,j as e,v as j,I as ai,r as I,J as A,h as Y,f as D,K as li,u as ti,M as si,O as di,Q as ci,S as pi,T as R,U as hi,V as xi,X as gi,Y as mi,k as v,N as fi,w as oi,Z as ui,P as yi,_ as bi}from"./index-f717c644.js";import{n as r}from"./emotion-styled.browser.esm-9fa80905.js";import{j as ki,k as wi,l as q,d as ri,m as $i,n as ji,o as vi}from"./dummyDrinkThumb-73564026.js";import{S as Di}from"./react-select.esm-938b3779.js";import"./emotion-element-c39617d8.browser.esm-e7709c23.js";import"./assertThisInitialized-e49c9981.js";const Ai=r.div`
   display: flex;
   flex-direction: column;
   row-gap: 80px;
@@ -25,13 +25,10 @@ import{p as n,j as e,v as j,I as ai,r as I,J as A,h as Y,f as D,K as li,u as ti,
     font-size: 24px;
     line-height: calc(32 / 24);
   }
-`,C=i=>({primaryTextColor:i==="dark"?"#F3F3F3":"#161F37",btnTextColor:i==="dark"?"#161F37":"#F3F3F3",btnBackground:i==="dark"?"#F3F3F3":"#161F37",primaryBackground:i==="dark"?"#F3F3F3":"#161F37",inputBackground:i==="light"?"#f6f6f6":"rgba(189, 189, 189, 0.2)",subtleTextColorEmail:i==="light"?"rgba(33, 33, 33, 0.8)":"rgba(250, 250, 250, 0.5)",subtleTextColor:i==="light"?"rgb(189, 189, 189)":"rgb(232, 232, 232)",secondaryRegisterTextColor:i==="light"?"red":"green",avatarBorderColor:i==="light"?"transparent":"rgba(27, 67, 113, 0.5)",avatarBackground:i==="light"?"#f6f6f6":"rgba(33, 33, 33, 0.8)",iconFill:i==="light"?"rgba(33, 33, 33, 0.8)":"#1b4371",inputBorder:i==="light"?"#e8e8e8":"rgba(189, 189, 189, 0.2)",commentBackground:i==="light"?"rgba(0, 0, 0, 0.03)":"rgba(27, 67, 113, 0.5)",showPasswordTxt:i==="light"?"#1B4371":"rgb(28, 28, 44)"}),Si=r.section`
-  @media only screen and (min-width: 768px) {
-    max-width: 704px;
+`,C=i=>({primaryTextColor:i==="dark"?"#F3F3F3":"#161F37",btnTextColor:i==="dark"?"#161F37":"#F3F3F3",btnBackground:i==="dark"?"#F3F3F3":"#161F37",primaryBackground:i==="dark"?"#F3F3F3":"#161F37",inputBackground:i==="light"?"#f6f6f6":"rgba(189, 189, 189, 0.2)",subtleTextColorEmail:i==="light"?"rgba(33, 33, 33, 0.8)":"rgba(250, 250, 250, 0.5)",subtleTextColor:i==="light"?"rgb(189, 189, 189)":"rgb(232, 232, 232)",secondaryRegisterTextColor:i==="light"?"red":"green",avatarBorderColor:i==="light"?"transparent":"rgba(27, 67, 113, 0.5)",avatarBackground:i==="light"?"#f6f6f6":"rgba(33, 33, 33, 0.8)",iconFill:i==="light"?"rgba(33, 33, 33, 0.8)":"#1b4371",inputBorder:i==="light"?"#e8e8e8":"rgba(189, 189, 189, 0.2)",commentBackground:i==="light"?"rgba(0, 0, 0, 0.03)":"rgba(27, 67, 113, 0.5)",showPasswordTxt:i==="light"?"#1B4371":"rgb(28, 28, 44)"}),Si=r.section`  
     @media only screen and (min-width: 1440px) {
       max-width: 833px;
-    }
-  }
+    }  
 `,Ci=r.button`
   width: 107px;
 
