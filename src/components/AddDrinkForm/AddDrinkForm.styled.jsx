@@ -1,13 +1,10 @@
 import styled from '@emotion/styled';
 import { getColors } from 'src/utils/getColors';
 
-export const Wrapper = styled.section`
-  @media only screen and (min-width: 768px) {
-    max-width: 704px;
+export const Wrapper = styled.section`  
     @media only screen and (min-width: 1440px) {
       max-width: 833px;
-    }
-  }
+    }  
 `;
 
 export const Button = styled.button`
