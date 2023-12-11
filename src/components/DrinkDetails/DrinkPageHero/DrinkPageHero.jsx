@@ -23,7 +23,6 @@ const DrinkPageHero = ({ drinkDetails }) => {
       <StyledImage
         src={drinkThumb}
         alt="picture Cocktail"
-        loading="lazy"
         onError={(event) => {
           event.currentTarget.src = drinkDummyImage;
         }}
