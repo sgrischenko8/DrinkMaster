@@ -38,9 +38,8 @@ export const StyledInput = styled.input`
   border-radius: 200px;
   border: ${({ theme }) =>
     theme === 'dark'
-      ? '1px solid rgba(243, 243, 243, 0.2)'
+      ? '1px solid #f3f3f320'
       : '1px solid rgba(10, 10, 17, 0.20)'};
-  /* color: ${colors.light}; //#f3f3f3 */
   color: ${({ theme }) =>
     theme === 'dark' ? colors.light : colors.primaryDark};
   font-family: Manrope;
@@ -53,7 +52,6 @@ export const StyledInput = styled.input`
   transition: border-color 250ms ease;
 
   &::placeholder {
-    /* color: ${colors.light}; //#f3f3f3 */
     color: ${({ theme }) =>
       theme === 'dark' ? colors.light : colors.primaryDark};
     opacity: 1;
@@ -61,7 +59,6 @@ export const StyledInput = styled.input`
 
   &:hover,
   &:focus {
-    /* border-color: rgba(243, 243, 243, 0.5); */
     border-color: ${({ theme }) =>
       theme === 'dark' ? 'rgba(243, 243, 243, 0.5)' : 'rgba(10, 10, 17, 0.50)'};
   }
@@ -90,6 +87,8 @@ export const StyledSearchButton = styled.button`
 
 export const StyledSearchIcon = styled.svg`
   display: block;
+  width:20px;
+  height:20px;
   stroke: ${({ theme }) =>
     theme === 'dark' ? colors.light : colors.primaryDark};
 `;
